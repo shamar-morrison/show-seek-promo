@@ -44,7 +44,7 @@ const hero2 = await sharp(rgba, { raw: { width: info.width, height: info.height,
 await sharp(hero2).trim({ threshold: 40 }).resize({ width: 720 }).webp({ quality: 82 }).toFile(`${out}/hero_2.webp`);
 
 mkdirSync(`${out}/backdrops`, { recursive: true });
-for (const name of ["avengers", "dune-part-two"]) {
+for (const name of ["avengers", "interstellar"]) {
   await sharp(`${raw}/backdrops/${name}.jpg`).resize(1280).webp({ quality: 70 }).toFile(`${out}/backdrops/${name}.webp`);
 }
 

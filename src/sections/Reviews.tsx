@@ -2,7 +2,7 @@ import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowUpRight01Icon, StarIcon } from "@hugeicons/core-free-icons";
 import { links, reviews, type Review } from "../content";
 import googlePlayMark from "../assets/badges/google-play-mark.webp";
-import backdrop from "../assets/backdrops/dune-part-two.webp";
+import backdrop from "../assets/backdrops/interstellar.webp";
 import { ExternalLink } from "../components/ExternalLink";
 import { Reveal } from "../components/Reveal";
 
@@ -65,10 +65,12 @@ export function Reviews() {
           width={1280}
           height={720}
           loading="lazy"
-          className="h-full w-full object-cover object-center brightness-[0.7]"
+          className="h-full w-full object-cover object-center brightness-[0.6]"
         />
         {/* Soft top edge, then fully black by the halfway point of the section */}
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#141414_0%,rgb(20_20_20/0.15)_22%,rgb(20_20_20/0.45)_60%,#141414_100%)]" />
+        {/* Shade behind the left-aligned heading so it stays readable over bright frames */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgb(20_20_20/0.7)_0%,rgb(20_20_20/0.3)_45%,transparent_70%)]" />
       </div>
       <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
         <Reveal>
