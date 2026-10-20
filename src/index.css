@@ -1,0 +1,107 @@
+@import "@fontsource-variable/inter";
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #141414;
+  --color-surface: #1c1c1c;
+  --color-surface-2: #242424;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-fg: #f5f5f1;
+  --color-muted: #a3a3a3;
+
+  /* Sampled from the in-app "ShowSeek" wordmark and progress bars */
+  --color-accent: #e54bf9;
+  /* Button fill: darker step so white labels pass WCAG AA (4.7:1) */
+  --color-accent-fill: #c026d3;
+  --color-accent-fill-hover: #a21caf;
+
+  --font-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Inter Variable", system-ui, sans-serif;
+  --font-sans: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Inter Variable", system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* z-index scale: nav 40, mobile sheet 50, tooltip 60 */
+
+html {
+  scroll-padding-top: 5rem;
+  background: var(--color-bg);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent-fill);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Motion (all gated behind reduced-motion) ---------- */
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drift {
+  to {
+    transform: translateY(calc(-100% / 3));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .enter {
+    animation: rise 0.9s var(--ease-out-expo) both;
+    animation-delay: calc(var(--i, 0) * 90ms);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.8s var(--ease-out-expo),
+      transform 0.8s var(--ease-out-expo);
+    transition-delay: calc(var(--i, 0) * 70ms);
+  }
+
+  .reveal[data-inview="true"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .poster-col {
+    animation: drift 90s linear infinite;
+  }
+
+  .poster-col[data-reverse="true"] {
+    animation-direction: reverse;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
