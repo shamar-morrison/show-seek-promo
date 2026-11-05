@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { ImdbLogo, StremioLogo, TraktLogo } from "../components/BrandLogos";
+import { ImdbLogo, StremioLogo, TraktLogo, TvTimeLogo } from "../components/BrandLogos";
 import { Reveal } from "../components/Reveal";
 
 type Source = {
@@ -32,6 +32,16 @@ const sources: Source[] = [
     ),
   },
   {
+    name: "TV Time",
+    title: "TV Time import",
+    body: "Saved your data before TV Time shut down? Bring your official data request, or an export from TV Time Out, Liberator or Data Extractor.",
+    logo: (
+      <span className="flex size-16 items-center justify-center rounded-2xl bg-[#373737]">
+        <TvTimeLogo className="size-9" />
+      </span>
+    ),
+  },
+  {
     name: "Stremio",
     title: "Stremio sync",
     body: "Link Stremio and anything you finish there, from movies and shows to anime, is marked as watched in ShowSeek.",
@@ -56,7 +66,7 @@ export function Imports() {
             Bring your history over in minutes, then let what you watch elsewhere keep ShowSeek up to date.
           </p>
         </Reveal>
-        <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-4 md:grid-cols-2">
           {sources.map((s, i) => (
             <Reveal key={s.name} index={i + 1} className="flex flex-col items-start rounded-3xl border border-line bg-surface p-8">
               <span role="img" aria-label={`${s.name} logo`}>

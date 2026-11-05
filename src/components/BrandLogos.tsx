@@ -16,6 +16,19 @@ export function ImdbLogo({ className = "" }: { className?: string }) {
   );
 }
 
+// Not in Simple Icons: redrawn from the TV Time app icon, keeping its per-block colors.
+export function TvTimeLogo({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 3 3" className={className} aria-hidden>
+      <rect x="0" y="0" width="1" height="1" fill="#fbe718" />
+      <rect x="1" y="0" width="1" height="1" fill="#fde100" />
+      <rect x="2" y="0" width="1" height="1" fill="#f4d011" />
+      <rect x="1" y="1" width="1" height="1" fill="#fbcd0b" />
+      <rect x="1" y="2" width="1" height="1" fill="#f2b51b" />
+    </svg>
+  );
+}
+
 export function StremioLogo({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
