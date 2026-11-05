@@ -13,12 +13,6 @@ export const navItems = [
   { label: "Download", href: "#download" },
 ];
 
-export const stats = [
-  { value: "10K+", label: "Downloads on Google Play" },
-  { value: "Trakt & IMDb", label: "Import your history in minutes" },
-  { value: "Free", label: "Optional premium features" },
-];
-
 const avatars = import.meta.glob<string>("./assets/avatars/*.webp", { eager: true, import: "default" });
 const avatarFor = (name: string) => avatars[`./assets/avatars/${name.toLowerCase().replace(/\s+/g, "-")}.webp`];
 

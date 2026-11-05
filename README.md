@@ -28,7 +28,7 @@ npm run preview   # serve the production build locally
 ```
 src/
   content.ts        # all copy, links and reviews (single source of truth)
-  sections/         # Hero, Stats, Features, Reviews, Socials, Download, Footer
+  sections/         # Hero, Features, Reviews, Socials, Download, Footer
   components/       # Navbar, Logo, StoreButtons, Reveal, ExternalLink
   pages/            # Home, NotFound
   hooks/useInView.ts
@@ -40,7 +40,7 @@ scripts/            # image optimization scripts (sharp)
 public/             # favicon, OG image, robots.txt
 ```
 
-Most text changes (links, reviews, stats) happen in `src/content.ts`.
+Most text changes (links, reviews) happen in `src/content.ts`.
 
 ## Images
 

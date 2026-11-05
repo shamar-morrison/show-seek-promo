@@ -71,7 +71,7 @@ const features: Feature[] = [
     id: "trakt",
     icon: ArrowDataTransferHorizontalIcon,
     title: "Trakt sync",
-    body: "Bring over your history, ratings and lists from Trakt or IMDb.",
+    body: "Bring over your history, ratings and lists from Trakt, IMDb or TV Time.",
     shot: traktShot,
     alt: "Connect Trakt screen listing what will be synced",
   },
