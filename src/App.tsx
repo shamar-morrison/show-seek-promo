@@ -13,7 +13,8 @@ function ScrollToHash() {
     if (hash) {
       document.getElementById(hash.slice(1))?.scrollIntoView();
     } else {
-      window.scrollTo(0, 0);
+      // Instant: the CSS smooth-scroll default would animate this, and it can be interrupted partway.
+      window.scrollTo({ top: 0, behavior: "instant" });
     }
   }, [pathname, hash]);
   return null;

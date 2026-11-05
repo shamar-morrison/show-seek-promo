@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Tabs } from "@base-ui/react/tabs";
 import { HugeiconsIcon, type IconSvgElement } from "@hugeicons/react";
 import {
@@ -91,18 +91,17 @@ export function Features() {
   const [active, setActive] = useState(features[0].id);
   const current = features.find((f) => f.id === active) ?? features[0];
   const listRef = useRef<HTMLDivElement>(null);
-  const changed = useRef(false);
 
-  // Keep the active pill visible in the mobile scroll row (no-op on desktop, where tabs are already in view)
-  useEffect(() => {
-    if (!changed.current) {
-      changed.current = true;
-      return;
-    }
-    listRef.current
-      ?.querySelector<HTMLElement>('[aria-selected="true"]')
-      ?.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
-  }, [active]);
+  const selectTab = (id: string) => {
+    setActive(id);
+    // Keep the active pill visible in the mobile scroll row (no-op on desktop, where tabs are already in view).
+    // Runs from the tab change, not an effect: an effect would also fire on page load and scroll the page here.
+    listRef.current?.children[features.findIndex((f) => f.id === id)]?.scrollIntoView({
+      block: "nearest",
+      inline: "center",
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section id="features" className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
@@ -118,7 +117,7 @@ export function Features() {
       <Reveal>
         <Tabs.Root
           value={active}
-          onValueChange={(v) => setActive(v as string)}
+          onValueChange={(v) => selectTab(v as string)}
           className="mt-14 grid grid-cols-1 gap-8 lg:mt-20 lg:grid-cols-[1fr_auto_1fr] lg:grid-rows-3 lg:items-center lg:gap-x-10 lg:gap-y-4"
         >
           <Tabs.List
