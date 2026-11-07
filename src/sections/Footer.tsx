@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { NewTwitterIcon } from "@hugeicons/core-free-icons";
 import { links, navItems } from "../content";
@@ -8,7 +9,9 @@ const heading = "text-sm font-semibold text-fg";
 const linkClass = "text-sm text-muted transition-colors hover:text-fg";
 
 export function Footer() {
-  const year = new Date().getFullYear();
+  // Starts at the build year to match the prerendered HTML, then corrects itself if a new year has begun since.
+  const [year, setYear] = useState(__BUILD_YEAR__);
+  useEffect(() => setYear(new Date().getFullYear()), []);
 
   return (
     <footer className="border-t border-line">

@@ -19,9 +19,17 @@ Requires Node 22 (see `.nvmrc`).
 ```bash
 npm ci
 npm run dev       # dev server
-npm run build     # type-check and build to dist/
+npm run build     # type-check, build to dist/ and prerender the HTML
 npm run preview   # serve the production build locally
 ```
+
+`npm run preview` falls back to `index.html` for unknown paths, so a 404 URL logs a hydration error there. Use `npx wrangler dev` after a build to get the real 404 behavior.
+
+## Prerendering
+
+`npm run build` writes real markup into `dist/index.html` and `dist/404.html`, so crawlers that don't run JavaScript see the full content. The client build runs first, then an SSR build of `src/entry-server.tsx` goes to `dist-ssr/` (outside `dist/`, so it is never deployed), and `scripts/prerender.mjs` fills the HTML. `src/main.tsx` hydrates that markup.
+
+Components render at build time and again in the browser, and both results must match. Anything that varies between the two (the current date, `window`, random values) has to start from a build-time value and change in an effect, as the footer year does.
 
 ## Project structure
 
@@ -36,7 +44,7 @@ src/
   assets/           # optimized images used by the site
 images/             # source screenshots, logo and OG image
 images/raw/         # downloaded badges, avatars, posters and backdrops
-scripts/            # image optimization scripts (sharp)
+scripts/            # prerender step and image optimization scripts (sharp)
 public/             # favicon, OG image, robots.txt
 ```
 
@@ -58,7 +66,7 @@ Re-run the relevant script after adding or replacing a source image.
 
 ## Deployment
 
-The site is served by Cloudflare Workers as static assets (no Worker code). `wrangler.jsonc` points at `./dist` with single-page-app fallback, and has `workers.dev` and preview URLs disabled.
+The site is served by Cloudflare Workers as static assets (no Worker code). `wrangler.jsonc` points at `./dist`, serves `404.html` with a 404 status for unknown paths, and has `workers.dev` and preview URLs disabled.
 
 ```bash
 npm run build
