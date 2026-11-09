@@ -1,6 +1,6 @@
 import sharp from 'sharp';
 const [,, src, out] = process.argv;
-const shots = ['hero','watch_lists_front','watch_progress_front','add_to_list_front','mood_picker_front','set_reminder_front','connect_trakt_front'];
+const shots = ['hero','watch_lists_front','watch_progress_front','add_to_list_front','mood_picker_front','set_reminder_front','connect_trakt_front','share_card_front','shuffle_front'];
 for (const s of shots) {
   // trim transparent padding (threshold keeps soft shadow mostly out)
   const buf = await sharp(`${src}/${s}.png`).ensureAlpha().trim({ threshold: 40 }).toBuffer();

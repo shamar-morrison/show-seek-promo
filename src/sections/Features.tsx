@@ -2,19 +2,19 @@ import { useRef, useState } from "react";
 import { Tabs } from "@base-ui/react/tabs";
 import { HugeiconsIcon, type IconSvgElement } from "@hugeicons/react";
 import {
-  ArrowDataTransferHorizontalIcon,
   Bookmark02Icon,
   Notification03Icon,
-  PlayListAddIcon,
+  Share08Icon,
+  ShuffleIcon,
   SmileIcon,
   Tv01Icon,
 } from "@hugeicons/core-free-icons";
 import progressShot from "../assets/watch_progress.webp";
 import listsShot from "../assets/watch_lists.webp";
-import addShot from "../assets/add_to_list.webp";
+import shuffleShot from "../assets/shuffle.webp";
 import moodShot from "../assets/mood_picker.webp";
 import reminderShot from "../assets/set_reminder.webp";
-import traktShot from "../assets/connect_trakt.webp";
+import shareShot from "../assets/share_card.webp";
 import { Reveal } from "../components/Reveal";
 
 type Feature = {
@@ -39,17 +39,17 @@ const features: Feature[] = [
     id: "lists",
     icon: Bookmark02Icon,
     title: "Watch lists",
-    body: "Should Watch, Currently Watching, Already Watched and Favorites.",
+    body: "Should Watch, Currently Watching, Already Watched, Favorites, plus custom lists you make.",
     shot: listsShot,
     alt: "Watch Lists screen with Should Watch, Currently Watching and Already Watched lists",
   },
   {
-    id: "add",
-    icon: PlayListAddIcon,
-    title: "Custom lists",
-    body: "Add any title to any list in one tap, or create your own.",
-    shot: addShot,
-    alt: "Add to List sheet with list checkboxes and a Create Custom List button",
+    id: "shuffle",
+    icon: ShuffleIcon,
+    title: "Shuffle picker",
+    body: "Can't decide? Shuffle any list and let ShowSeek pick tonight's watch.",
+    shot: shuffleShot,
+    alt: "Shuffle dialog over the Should Watch list, landing on Mystic River",
   },
   {
     id: "mood",
@@ -68,12 +68,12 @@ const features: Feature[] = [
     alt: "Set Reminder dialog with every episode and on air day options selected",
   },
   {
-    id: "trakt",
-    icon: ArrowDataTransferHorizontalIcon,
-    title: "Trakt sync",
-    body: "Bring over your history, ratings and lists from Trakt, IMDb or TV Time.",
-    shot: traktShot,
-    alt: "Connect Trakt screen listing what will be synced",
+    id: "share",
+    icon: Share08Icon,
+    title: "Share cards",
+    body: "Turn any title into a card for your story, in portrait, square or landscape.",
+    shot: shareShot,
+    alt: "Share Card editor for Avengers: Endgame with note, format and style options",
   },
 ];
 

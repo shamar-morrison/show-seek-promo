@@ -55,6 +55,9 @@ Most text changes (links, reviews) happen in `src/content.ts`.
 Source images are converted to optimized WebP in `src/assets/` with two scripts:
 
 ```bash
+# (Optional) Put raw phone screenshots from images/raw/screens/ into the phone frame → images/<name>_front.png
+node scripts/frame-screens.mjs
+
 # App screenshots, hero images, logo, favicons and OG image from images/
 node scripts/optimize-images.mjs "$PWD/images" "$PWD"
 
