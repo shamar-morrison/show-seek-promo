@@ -5,7 +5,6 @@ import { links } from "../content";
 import { Breadcrumbs } from "../components/Breadcrumbs";
 import { ExternalLink } from "../components/ExternalLink";
 import { FaqList } from "../components/FaqList";
-import { GooglePlayButton } from "../components/StoreButtons";
 import { Download } from "../sections/Download";
 import { formatDate, pageHeading, prose, sectionHeading as h2 } from "../styles";
 
@@ -68,7 +67,7 @@ const columns: { key: "tvTime" | "ratingsLists" | "trakt" | "stremio"; label: st
 export function ComparePage() {
   return (
     <>
-      <article className="mx-auto max-w-5xl px-4 pt-10 pb-24 sm:px-6 lg:pt-14">
+      <article className="mx-auto max-w-4xl px-4 pt-10 pb-24 sm:px-6 lg:pt-14">
         <Breadcrumbs
           items={[
             { name: "Home", path: "/" },
@@ -76,7 +75,7 @@ export function ComparePage() {
           ]}
         />
 
-        <header className="mt-10 max-w-3xl">
+        <header className="mt-10">
           <p className="text-sm font-semibold tracking-[0.2em] text-accent uppercase">Comparison</p>
           <h1 className={`mt-4 ${pageHeading}`}>{compareMeta.h1}</h1>
           <p className="mt-5 text-lg leading-relaxed text-fg/80">{compareMeta.intro}</p>
@@ -89,11 +88,11 @@ export function ComparePage() {
           <h2 id="short-title" className="font-display text-xl font-bold tracking-tight">
             The short answer
           </h2>
-          <dl className="mt-4 grid gap-4 sm:grid-cols-3">
+          <dl className="mt-4 divide-y divide-white/10">
             {shortAnswer.map((s) => (
-              <div key={s.label}>
+              <div key={s.label} className="grid gap-1 py-3 first:pt-0 last:pb-0 sm:grid-cols-[11rem_1fr] sm:gap-4">
                 <dt className="font-semibold text-fg">{s.label}</dt>
-                <dd className="mt-1 leading-relaxed text-fg/80">{s.text}</dd>
+                <dd className="leading-relaxed text-fg/80">{s.text}</dd>
               </div>
             ))}
           </dl>
@@ -105,13 +104,13 @@ export function ComparePage() {
           </h2>
           <p className="mt-3 leading-relaxed text-muted">
             The details behind each cell are in the app cards below.
-            <span className="md:hidden"> Swipe the table sideways to see every column.</span>
+            <span className="lg:hidden"> Swipe the table sideways to see every column.</span>
           </p>
           {/* relative: the sr-only labels are absolutely positioned and would otherwise escape the scroll box and widen the page. */}
           <div className="relative mt-6 overflow-x-auto rounded-3xl border border-line">
-            <table className="w-full min-w-[720px] border-collapse text-left">
+            <table className="w-full min-w-[640px] border-collapse text-left">
               <caption className="sr-only">
-                TV Time alternatives compared by platform, TV Time import, ratings and lists, Trakt and Stremio
+                TV Time alternatives compared by TV Time import, ratings and lists, iPhone support, Trakt and Stremio
               </caption>
               <thead>
                 <tr className="border-b border-line text-xs font-semibold tracking-wide text-muted uppercase">
@@ -119,18 +118,15 @@ export function ComparePage() {
                     App
                   </th>
                   {columns.slice(0, 2).map((c) => (
-                    <th key={c.key} scope="col" className="bg-surface-2 px-4 py-3">
+                    <th key={c.key} scope="col" className="bg-surface-2 px-3 py-3">
                       {c.label}
                     </th>
                   ))}
                   <th scope="col" className="bg-surface-2 px-3 py-3 text-center">
-                    Android
-                  </th>
-                  <th scope="col" className="bg-surface-2 px-3 py-3 text-center">
                     iPhone
                   </th>
                   {columns.slice(2).map((c) => (
-                    <th key={c.key} scope="col" className="bg-surface-2 px-4 py-3">
+                    <th key={c.key} scope="col" className="bg-surface-2 px-3 py-3">
                       {c.label}
                     </th>
                   ))}
@@ -144,23 +140,20 @@ export function ComparePage() {
                   >
                     <th
                       scope="row"
-                      className={`sticky left-0 z-10 px-4 py-3.5 font-semibold whitespace-nowrap text-fg ${app.isShowSeek ? "bg-[#211623]" : "bg-bg"}`}
+                      className={`sticky left-0 z-10 px-3 py-3.5 font-semibold whitespace-nowrap text-fg ${app.isShowSeek ? "bg-[#211623]" : "bg-bg"}`}
                     >
                       {app.name}
                     </th>
                     {columns.slice(0, 2).map((c) => (
-                      <td key={c.key} className="px-4 py-3.5">
+                      <td key={c.key} className="px-3 py-3.5">
                         <CellView cell={app[c.key]} />
                       </td>
                     ))}
                     <td className="px-3 py-3.5">
-                      <PlatformCell has={app.android} />
-                    </td>
-                    <td className="px-3 py-3.5">
                       <PlatformCell has={app.iphone} />
                     </td>
                     {columns.slice(2).map((c) => (
-                      <td key={c.key} className="px-4 py-3.5">
+                      <td key={c.key} className="px-3 py-3.5">
                         <CellView cell={app[c.key]} />
                       </td>
                     ))}
@@ -182,11 +175,12 @@ export function ComparePage() {
             </li>
           </ul>
           <p className="mt-3 text-sm leading-relaxed text-muted">
-            The four TV Time export types are the GDPR data request, TV Time Out, Liberator and Data Extractor.
+            All nine apps run on Android. The four TV Time export types are the GDPR data request, TV Time Out,
+            Liberator and Data Extractor.
           </p>
         </section>
 
-        <section id="what-to-look-for" aria-labelledby="look-title" className="mt-16 max-w-3xl">
+        <section id="what-to-look-for" aria-labelledby="look-title" className="mt-16">
           <h2 id="look-title" className={h2}>
             What to look for in a TV Time alternative
           </h2>
@@ -197,40 +191,41 @@ export function ComparePage() {
           <h2 id="apps-title" className={h2}>
             The apps, one by one
           </h2>
-          <ul className="mt-6 grid gap-4 md:grid-cols-2">
+          <ul className="mt-6 grid gap-4">
             {apps.map((app) => (
               <li
                 key={app.name}
-                className={`flex flex-col rounded-3xl border p-6 ${app.isShowSeek ? "border-accent/40 bg-accent-fill/[0.07]" : "border-line bg-surface"}`}
+                className={`grid gap-4 rounded-3xl border p-6 sm:grid-cols-[10rem_1fr] sm:gap-6 ${app.isShowSeek ? "border-accent/40 bg-accent-fill/[0.07]" : "border-line bg-surface"}`}
               >
-                <div className="flex items-baseline justify-between gap-4">
+                <div className="flex flex-col gap-1">
                   <h3 className="font-display text-xl font-bold tracking-tight">{app.name}</h3>
                   <span className="text-sm text-muted">{app.platforms}</span>
-                </div>
-                <p className="mt-3 leading-relaxed text-fg/85">
-                  <strong className="font-semibold text-fg">Best for:</strong> {app.bestFor}
-                </p>
-                <p className="mt-2 leading-relaxed text-muted">
-                  <strong className="font-semibold text-fg/80">TV Time import:</strong> {app.tvTimeDetail}
-                </p>
-                <p className="mt-2 leading-relaxed text-muted">
-                  <strong className="font-semibold text-fg/80">Worth knowing:</strong> {app.worthKnowing}
-                </p>
-                <div className="mt-auto pt-5">
-                  {app.isShowSeek ? (
-                    <GooglePlayButton />
-                  ) : (
-                    <ExternalLink href={app.url} className="text-sm font-semibold text-accent hover:underline">
-                      Visit {app.name} →
+                  <span className="mt-2 sm:mt-auto">
+                    <ExternalLink
+                      href={app.isShowSeek ? links.playStore : app.url}
+                      className="text-sm font-semibold text-accent hover:underline"
+                    >
+                      {app.isShowSeek ? "On Google Play →" : `Visit ${app.name} →`}
                     </ExternalLink>
-                  )}
+                  </span>
+                </div>
+                <div className="space-y-2 leading-relaxed">
+                  <p className="text-fg/85">
+                    <strong className="font-semibold text-fg">Best for:</strong> {app.bestFor}
+                  </p>
+                  <p className="text-muted">
+                    <strong className="font-semibold text-fg/80">TV Time import:</strong> {app.tvTimeDetail}
+                  </p>
+                  <p className="text-muted">
+                    <strong className="font-semibold text-fg/80">Worth knowing:</strong> {app.worthKnowing}
+                  </p>
                 </div>
               </li>
             ))}
           </ul>
         </section>
 
-        <section aria-labelledby="faq-title" className="mt-16 max-w-3xl">
+        <section aria-labelledby="faq-title" className="mt-16">
           <h2 id="faq-title" className={h2}>
             Frequently asked questions
           </h2>
@@ -239,7 +234,7 @@ export function ComparePage() {
           </div>
         </section>
 
-        <p className="mt-16 max-w-3xl text-sm leading-relaxed text-muted">
+        <p className="mt-16 text-sm leading-relaxed text-muted">
           We make ShowSeek, so we've tried to be fair: every claim about another app comes from that app's own website
           or store listing, and anything we couldn't confirm is marked as such. Apps change often. Spot something out
           of date?{" "}

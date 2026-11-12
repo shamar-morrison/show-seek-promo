@@ -16,7 +16,7 @@ export type AltApp = {
   name: string;
   /** Full platform list for the app card. */
   platforms: string;
-  android: boolean;
+  /** Every app compared runs on Android, so only iPhone support varies. */
   iphone: boolean;
   /** Matrix cells: keep the text to a word or two. */
   tvTime: Cell;
@@ -42,7 +42,6 @@ export const apps: AltApp[] = [
     name: "ShowSeek",
     isShowSeek: true,
     platforms: "Android",
-    android: true,
     iphone: false,
     tvTime: { state: "yes", text: "All 4 types" },
     ratingsLists: { state: "yes", text: "Both" },
@@ -59,7 +58,6 @@ export const apps: AltApp[] = [
   {
     name: "Hobi",
     platforms: "Android, iPhone",
-    android: true,
     iphone: true,
     tvTime: { state: "yes", text: "GDPR only" },
     ratingsLists: { state: "partial", text: "Ratings" },
@@ -73,7 +71,6 @@ export const apps: AltApp[] = [
   {
     name: "Moviebase",
     platforms: "Android, iPhone",
-    android: true,
     iphone: true,
     tvTime: { state: "yes", text: "ZIP or CSV" },
     ratingsLists: { state: "partial", text: "Ratings" },
@@ -87,7 +84,6 @@ export const apps: AltApp[] = [
   {
     name: "Movie Paradise",
     platforms: "Android, iPhone",
-    android: true,
     iphone: true,
     tvTime: { state: "yes", text: "3 of 4 types" },
     ratingsLists: { state: "yes", text: "Both" },
@@ -102,7 +98,6 @@ export const apps: AltApp[] = [
   {
     name: "Trakt",
     platforms: "Web, Android, iPhone",
-    android: true,
     iphone: true,
     tvTime: { state: "yes", text: "On the website" },
     ratingsLists: { state: "partial", text: "Lists" },
@@ -116,7 +111,6 @@ export const apps: AltApp[] = [
   {
     name: "Simkl",
     platforms: "Web, Android, iPhone",
-    android: true,
     iphone: true,
     tvTime: unconfirmed,
     ratingsLists: unconfirmed,
@@ -130,7 +124,6 @@ export const apps: AltApp[] = [
   {
     name: "Serializd",
     platforms: "Web, Android, iPhone",
-    android: true,
     iphone: true,
     tvTime: unconfirmed,
     ratingsLists: unconfirmed,
@@ -144,7 +137,6 @@ export const apps: AltApp[] = [
   {
     name: "Bingers",
     platforms: "Android, iPhone",
-    android: true,
     iphone: true,
     tvTime: { state: "yes", text: "Formats not listed" },
     ratingsLists: unconfirmed,
@@ -159,7 +151,6 @@ export const apps: AltApp[] = [
   {
     name: "Cinopsys",
     platforms: "Android",
-    android: true,
     iphone: false,
     tvTime: { state: "no", text: "Not directly" },
     ratingsLists: notApplicable,
