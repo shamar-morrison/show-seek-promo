@@ -6,7 +6,12 @@ import { dirname, join } from "node:path";
 // Must be set before React loads, or it renders with its development build.
 process.env.NODE_ENV = "production";
 
-const { render, pages, SITE_URL } = await import("../dist-ssr/entry-server.js");
+const { render, pages, SITE_URL, watchOrderProblems } = await import("../dist-ssr/entry-server.js");
+
+const problems = watchOrderProblems();
+if (problems.length > 0) {
+  throw new Error(`Prerender failed: watch-order data problems:\n  ${problems.join("\n  ")}`);
+}
 
 const ROOT = '<div id="root"></div>';
 const template = await readFile("dist/index.html", "utf8");

@@ -6,8 +6,15 @@ import { links, navItems } from "../content";
 import { Logo } from "../components/Logo";
 import { ExternalLink } from "../components/ExternalLink";
 import { guidePath, guides } from "../guides";
+import { watchOrders, watchPath } from "../watch";
 
 const heading = "text-sm font-semibold text-fg";
+
+// The full list lives on /watch; the footer shows the first few of each kind.
+const footerWatchOrders = [
+  ...watchOrders.filter((o) => o.category === "anime").slice(0, 4),
+  ...watchOrders.filter((o) => o.category === "movies").slice(0, 4),
+];
 const linkClass = "text-sm text-muted transition-colors hover:text-fg";
 
 export function Footer() {
@@ -17,7 +24,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-[2fr_1fr_1fr_1fr_1fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-[2fr_1fr_1fr_1fr_1fr_1fr] lg:px-8">
         <div className="max-w-xs">
           <Logo />
           <p className="mt-4 text-sm leading-relaxed text-muted">
@@ -48,6 +55,24 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className={heading}>Watch orders</h3>
+          <ul className="mt-4 flex flex-col gap-3">
+            {footerWatchOrders.map((o) => (
+              <li key={o.slug}>
+                <Link to={watchPath(o.slug)} className={linkClass}>
+                  {o.name}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <Link to="/watch" className={`${linkClass} font-semibold`}>
+                All watch orders →
+              </Link>
+            </li>
           </ul>
         </div>
 

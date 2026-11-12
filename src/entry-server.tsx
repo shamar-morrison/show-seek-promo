@@ -4,6 +4,7 @@ import { StaticRouter } from "react-router-dom";
 import App from "./App";
 
 export { pages } from "./routes";
+export { watchOrderProblems } from "./watch";
 export { SITE_URL } from "./seo";
 
 /** Build-time only (see scripts/prerender.mjs). Keep this tree in sync with main.tsx so hydration matches. */

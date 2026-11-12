@@ -8,7 +8,10 @@ import { NotFound } from "./pages/NotFound";
 import { GuidePage } from "./pages/GuidePage";
 import { GuidesIndex } from "./pages/GuidesIndex";
 import { guidePath, guides } from "./guides";
-import { guidesIndexPath, pageForPath } from "./routes";
+import { WatchIndex } from "./pages/WatchIndex";
+import { WatchOrderPage } from "./pages/WatchOrderPage";
+import { watchOrders, watchPath } from "./watch";
+import { guidesIndexPath, pageForPath, watchIndexPath } from "./routes";
 
 /** Scrolls to the URL hash after route changes (e.g. /#features from the 404 page). */
 function ScrollToHash() {
@@ -46,6 +49,10 @@ export default function App() {
           <Route path={guidesIndexPath} element={<GuidesIndex />} />
           {guides.map((g) => (
             <Route key={g.slug} path={guidePath(g.slug)} element={<GuidePage guide={g} />} />
+          ))}
+          <Route path={watchIndexPath} element={<WatchIndex />} />
+          {watchOrders.map((o) => (
+            <Route key={o.slug} path={watchPath(o.slug)} element={<WatchOrderPage order={o} />} />
           ))}
           <Route path="*" element={<NotFound />} />
         </Routes>

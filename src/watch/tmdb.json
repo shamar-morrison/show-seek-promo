@@ -1,0 +1,997 @@
+{
+  "movie/1038392": {
+    "title": "The Conjuring: Last Rites",
+    "date": "2025-09-03",
+    "runtime": 136,
+    "poster": "/umvkcIb0XAk486TEmx1V5aVzhbm.jpg"
+  },
+  "movie/119450": {
+    "title": "Dawn of the Planet of the Apes",
+    "date": "2014-07-08",
+    "runtime": 130,
+    "poster": "/mSmAc9G25fhOHH45SLEeagR0qi7.jpg"
+  },
+  "movie/12444": {
+    "title": "Harry Potter and the Deathly Hallows: Part 1",
+    "date": "2010-11-17",
+    "runtime": 146,
+    "poster": "/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg"
+  },
+  "movie/12445": {
+    "title": "Harry Potter and the Deathly Hallows: Part 2",
+    "date": "2011-07-12",
+    "runtime": 130,
+    "poster": "/c54HpQmuwXjHq2C9wmoACjxoom3.jpg"
+  },
+  "movie/124905": {
+    "title": "Godzilla",
+    "date": "2014-05-14",
+    "runtime": 123,
+    "poster": "/tphkjmQq8WebuVwNXelmjLUXuPJ.jpg"
+  },
+  "movie/126889": {
+    "title": "Alien: Covenant",
+    "date": "2017-05-09",
+    "runtime": 122,
+    "poster": "/zecMELPbU5YMQpC81Z8ImaaXuf9.jpg"
+  },
+  "movie/126963": {
+    "title": "Dragon Ball Z: Battle of Gods",
+    "date": "2013-03-30",
+    "runtime": 85,
+    "poster": "/nxZEdYcHMuD8SSuwusDnK9CD2H1.jpg"
+  },
+  "movie/127585": {
+    "title": "X-Men: Days of Future Past",
+    "date": "2014-05-15",
+    "runtime": 132,
+    "poster": "/tYfijzolzgoMOtegh1Y7j2Enorg.jpg"
+  },
+  "movie/1311031": {
+    "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle",
+    "date": "2025-07-18",
+    "runtime": 156,
+    "poster": "/fWVSwgjpT2D78VUh6X8UBd2rorW.jpg"
+  },
+  "movie/13804": {
+    "title": "Fast & Furious",
+    "date": "2009-04-02",
+    "runtime": 107,
+    "poster": "/lUtVoRukW7WNtUySwd8hWlByBds.jpg"
+  },
+  "movie/138843": {
+    "title": "The Conjuring",
+    "date": "2013-07-18",
+    "runtime": 112,
+    "poster": "/wVYREutTvI2tmxr6ujrHT704wGF.jpg"
+  },
+  "movie/16157": {
+    "title": "Mobile Suit Gundam: Char's Counterattack",
+    "date": "1988-03-12",
+    "runtime": 120,
+    "poster": "/8I8gWpTtzMLt2lBlBoS7lM436nA.jpg"
+  },
+  "movie/168259": {
+    "title": "Furious 7",
+    "date": "2015-04-01",
+    "runtime": 138,
+    "poster": "/wurKlC3VKUgcfsn0K51MJYEleS2.jpg"
+  },
+  "movie/1685": {
+    "title": "Beneath the Planet of the Apes",
+    "date": "1970-04-23",
+    "runtime": 95,
+    "poster": "/szHCeYwi4ubewuYnlnz0YGqWnQC.jpg"
+  },
+  "movie/1687": {
+    "title": "Escape from the Planet of the Apes",
+    "date": "1971-05-20",
+    "runtime": 98,
+    "poster": "/vqD7qjBRizY7sPVIHbFRUZwgEXL.jpg"
+  },
+  "movie/1688": {
+    "title": "Conquest of the Planet of the Apes",
+    "date": "1972-06-29",
+    "runtime": 88,
+    "poster": "/tzKZRY2opw5MruSkevffgT5ocun.jpg"
+  },
+  "movie/1705": {
+    "title": "Battle for the Planet of the Apes",
+    "date": "1973-06-15",
+    "runtime": 93,
+    "poster": "/dP5dYjLp5p2CG103cJMio4Nj29d.jpg"
+  },
+  "movie/177677": {
+    "title": "Mission: Impossible - Rogue Nation",
+    "date": "2015-07-28",
+    "runtime": 131,
+    "poster": "/fRJLXQBHK2wyznK5yZbO7vmsuVK.jpg"
+  },
+  "movie/2080": {
+    "title": "X-Men Origins: Wolverine",
+    "date": "2009-04-28",
+    "runtime": 107,
+    "poster": "/yj8LbTju1p7CUJg7US2unSBk33s.jpg"
+  },
+  "movie/225745": {
+    "title": "Steins;Gate: The Movie - Load Region of Déjà Vu",
+    "date": "2013-04-20",
+    "runtime": 90,
+    "poster": "/bXhogkZCR0aOQ077rfMULYbDmtH.jpg"
+  },
+  "movie/245891": {
+    "title": "John Wick",
+    "date": "2014-10-16",
+    "runtime": 101,
+    "poster": "/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg"
+  },
+  "movie/246655": {
+    "title": "X-Men: Apocalypse",
+    "date": "2016-05-18",
+    "runtime": 144,
+    "poster": "/ikA8UhYdTGpqbatFa93nIf6noSr.jpg"
+  },
+  "movie/250546": {
+    "title": "Annabelle",
+    "date": "2014-10-01",
+    "runtime": 99,
+    "poster": "/yLsuU2P2SpDYFwtZQ7dtfVAf6TE.jpg"
+  },
+  "movie/259316": {
+    "title": "Fantastic Beasts and Where to Find Them",
+    "date": "2016-11-16",
+    "runtime": 133,
+    "poster": "/h6NYfVUyM6CDURtZSnBpz647Ldd.jpg"
+  },
+  "movie/259693": {
+    "title": "The Conjuring 2",
+    "date": "2016-06-08",
+    "runtime": 134,
+    "poster": "/zEqyD0SBt6HL7W9JQoWwtd5Do1T.jpg"
+  },
+  "movie/263115": {
+    "title": "Logan",
+    "date": "2017-02-28",
+    "runtime": 137,
+    "poster": "/fnbjcRDYn6YviCcePDnGdyAkYsB.jpg"
+  },
+  "movie/281338": {
+    "title": "War for the Planet of the Apes",
+    "date": "2017-07-11",
+    "runtime": 140,
+    "poster": "/3vYhLLxrTtZLysXtIWktmd57Snv.jpg"
+  },
+  "movie/283984": {
+    "title": "Fate/stay night: Heaven's Feel I. Presage Flower",
+    "date": "2017-10-14",
+    "runtime": 120,
+    "poster": "/6nEtmBg07DA5BWjcrmD49rxHsVQ.jpg"
+  },
+  "movie/293167": {
+    "title": "Kong: Skull Island",
+    "date": "2017-03-08",
+    "runtime": 118,
+    "poster": "/r2517Vz9EhDhj88qwbDVj8DCRZN.jpg"
+  },
+  "movie/293660": {
+    "title": "Deadpool",
+    "date": "2016-02-09",
+    "runtime": 108,
+    "poster": "/3E53WEZJqP6aM84D8CckXx4pIHw.jpg"
+  },
+  "movie/303857": {
+    "title": "Dragon Ball Z: Resurrection 'F'",
+    "date": "2015-04-18",
+    "runtime": 93,
+    "poster": "/soq3AxjALdBfdPAm8H7yuMmNL5Y.jpg"
+  },
+  "movie/317442": {
+    "title": "The Last: Naruto the Movie",
+    "date": "2014-12-06",
+    "runtime": 114,
+    "poster": "/bAQ8O5Uw6FedtlCbJTutenzPVKd.jpg"
+  },
+  "movie/320288": {
+    "title": "Dark Phoenix",
+    "date": "2019-06-05",
+    "runtime": 114,
+    "poster": "/cCTJPelKGLhALq3r51A9uMonxKj.jpg"
+  },
+  "movie/324552": {
+    "title": "John Wick: Chapter 2",
+    "date": "2017-02-08",
+    "runtime": 122,
+    "poster": "/hXWBc0ioZP3cN4zCu6SN3YHXZVO.jpg"
+  },
+  "movie/337339": {
+    "title": "The Fate of the Furious",
+    "date": "2017-04-12",
+    "runtime": 136,
+    "poster": "/dImWM7GJqryWJO9LHa3XQ8DD5NH.jpg"
+  },
+  "movie/338952": {
+    "title": "Fantastic Beasts: The Crimes of Grindelwald",
+    "date": "2018-11-14",
+    "runtime": 134,
+    "poster": "/fMMrl8fD9gRCFJvsx0SuFwkEOop.jpg"
+  },
+  "movie/338953": {
+    "title": "Fantastic Beasts: The Secrets of Dumbledore",
+    "date": "2022-04-06",
+    "runtime": 142,
+    "poster": "/3c5GNLB4yRSLBby0trHoA1DSQxQ.jpg"
+  },
+  "movie/340102": {
+    "title": "The New Mutants",
+    "date": "2020-08-26",
+    "runtime": 94,
+    "poster": "/xiDGcXJTvu1lazFRYip6g1eLt9c.jpg"
+  },
+  "movie/347201": {
+    "title": "Boruto: Naruto the Movie",
+    "date": "2015-08-07",
+    "runtime": 95,
+    "poster": "/1k6iwC4KaPvTBt1JuaqXy3noZRY.jpg"
+  },
+  "movie/348": {
+    "title": "Alien",
+    "date": "1979-05-25",
+    "runtime": 117,
+    "poster": "/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg"
+  },
+  "movie/353081": {
+    "title": "Mission: Impossible - Fallout",
+    "date": "2018-07-25",
+    "runtime": 147,
+    "poster": "/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg"
+  },
+  "movie/357786": {
+    "title": "Kizumonogatari Part 1: Tekketsu",
+    "date": "2016-01-08",
+    "runtime": 63,
+    "poster": "/vftYhVOdvMCmb0dQIRIKmUYG9TU.jpg"
+  },
+  "movie/362584": {
+    "title": "Kizumonogatari Part 2: Nekketsu",
+    "date": "2016-08-19",
+    "runtime": 68,
+    "poster": "/fv9AALP1dofQUvKAkxnkz105MOv.jpg"
+  },
+  "movie/362585": {
+    "title": "Kizumonogatari Part 3: Reiketsu",
+    "date": "2017-01-06",
+    "runtime": 83,
+    "poster": "/rfKHhHvSwyCv59Ow6wuGX67RkXR.jpg"
+  },
+  "movie/36657": {
+    "title": "X-Men",
+    "date": "2000-07-13",
+    "runtime": 104,
+    "poster": "/bRDAc4GogyS9ci3ow7UnInOcriN.jpg"
+  },
+  "movie/36658": {
+    "title": "X2",
+    "date": "2003-04-27",
+    "runtime": 133,
+    "poster": "/bst4alFUXCxISwdRUKSMhhkrX1M.jpg"
+  },
+  "movie/36668": {
+    "title": "X-Men: The Last Stand",
+    "date": "2006-05-24",
+    "runtime": 104,
+    "poster": "/a2xicU8DpKtRizOHjQLC1JyCSRS.jpg"
+  },
+  "movie/373571": {
+    "title": "Godzilla: King of the Monsters",
+    "date": "2019-05-29",
+    "runtime": 132,
+    "poster": "/mzOHg7Q5q9yUmY0b9Esu8Qe6Nnm.jpg"
+  },
+  "movie/383498": {
+    "title": "Deadpool 2",
+    "date": "2018-05-15",
+    "runtime": 120,
+    "poster": "/gyfPKfFYcVW54MoqhYlwwDDIfJR.jpg"
+  },
+  "movie/384018": {
+    "title": "Fast & Furious Presents: Hobbs & Shaw",
+    "date": "2019-07-31",
+    "runtime": 137,
+    "poster": "/qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg"
+  },
+  "movie/385128": {
+    "title": "F9",
+    "date": "2021-05-19",
+    "runtime": 143,
+    "poster": "/deEmLILTPejEb6OGsXRJ5MCvyDW.jpg"
+  },
+  "movie/385687": {
+    "title": "Fast X",
+    "date": "2023-05-17",
+    "runtime": 142,
+    "poster": "/fiVW06jE7z9YnO4trhaMEdclSiC.jpg"
+  },
+  "movie/390634": {
+    "title": "Fate/stay night: Heaven's Feel II. Lost Butterfly",
+    "date": "2019-01-12",
+    "runtime": 117,
+    "poster": "/4tS0iyKQBDFqVpVcH21MSJwXZdq.jpg"
+  },
+  "movie/390635": {
+    "title": "Fate/stay night: Heaven's Feel III. Spring Song",
+    "date": "2020-08-15",
+    "runtime": 120,
+    "poster": "/hIK5kEdFwOHnHTa06ntTVSfG9im.jpg"
+  },
+  "movie/396422": {
+    "title": "Annabelle: Creation",
+    "date": "2017-08-03",
+    "runtime": 110,
+    "poster": "/tb86j8jVCVsdZnzf8I6cIi65IeM.jpg"
+  },
+  "movie/399566": {
+    "title": "Godzilla vs. Kong",
+    "date": "2021-03-24",
+    "runtime": 114,
+    "poster": "/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg"
+  },
+  "movie/423108": {
+    "title": "The Conjuring: The Devil Made Me Do It",
+    "date": "2021-05-25",
+    "runtime": 111,
+    "poster": "/xbSuFiJbbBWCkyCCKIMfuDCA4yV.jpg"
+  },
+  "movie/428142": {
+    "title": "Fate/Grand Order -First Order-",
+    "date": "2016-12-31",
+    "runtime": 72,
+    "poster": "/3u9kOT50sUxGGfzcVjljlQXbt4p.jpg"
+  },
+  "movie/439079": {
+    "title": "The Nun",
+    "date": "2018-09-05",
+    "runtime": 96,
+    "poster": "/sFC1ElvoKGdHJIWRpNB3xWJ9lJA.jpg"
+  },
+  "movie/458156": {
+    "title": "John Wick: Chapter 3 - Parabellum",
+    "date": "2019-05-15",
+    "runtime": 131,
+    "poster": "/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg"
+  },
+  "movie/480414": {
+    "title": "The Curse of La Llorona",
+    "date": "2019-04-17",
+    "runtime": 93,
+    "poster": "/hETrPpoKs6BwoilK64YJ7Z5GcRT.jpg"
+  },
+  "movie/49538": {
+    "title": "X-Men: First Class",
+    "date": "2011-06-01",
+    "runtime": 132,
+    "poster": "/hNEokmUke0dazoBhttFN0o3L7Xv.jpg"
+  },
+  "movie/503314": {
+    "title": "Dragon Ball Super: Broly",
+    "date": "2018-12-14",
+    "runtime": 101,
+    "poster": "/uMEgkyiPznZP5AiMSWAk2jsj5gC.jpg"
+  },
+  "movie/51497": {
+    "title": "Fast Five",
+    "date": "2011-04-20",
+    "runtime": 131,
+    "poster": "/gEfQjjQwY7fh5bI4GlG0RrBu7Pz.jpg"
+  },
+  "movie/521029": {
+    "title": "Annabelle Comes Home",
+    "date": "2019-06-26",
+    "runtime": 106,
+    "poster": "/qWsHMrbg9DsBY3bCMk9jyYCRVRs.jpg"
+  },
+  "movie/533535": {
+    "title": "Deadpool & Wolverine",
+    "date": "2024-07-24",
+    "runtime": 128,
+    "poster": "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg"
+  },
+  "movie/541671": {
+    "title": "Ballerina",
+    "date": "2025-06-04",
+    "runtime": 125,
+    "poster": "/2VUmvqsHb6cEtdfscEA6fqqVzLg.jpg"
+  },
+  "movie/56292": {
+    "title": "Mission: Impossible - Ghost Protocol",
+    "date": "2011-12-07",
+    "runtime": 133,
+    "poster": "/eRZTGx7GsiKqPch96k27LK005ZL.jpg"
+  },
+  "movie/575264": {
+    "title": "Mission: Impossible - Dead Reckoning Part One",
+    "date": "2023-07-08",
+    "runtime": 164,
+    "poster": "/NNxYkU70HPurnNCSiCjYAmacwm.jpg"
+  },
+  "movie/575265": {
+    "title": "Mission: Impossible - The Final Reckoning",
+    "date": "2025-05-17",
+    "runtime": 170,
+    "poster": "/iKPsC9EFUafRP9SrUznI61getVP.jpg"
+  },
+  "movie/584": {
+    "title": "2 Fast 2 Furious",
+    "date": "2003-06-05",
+    "runtime": 108,
+    "poster": "/6nDZExrDKIXvSAghsFKVFRVJuSf.jpg"
+  },
+  "movie/603692": {
+    "title": "John Wick: Chapter 4",
+    "date": "2023-03-21",
+    "runtime": 170,
+    "poster": "/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg"
+  },
+  "movie/610150": {
+    "title": "Dragon Ball Super: Super Hero",
+    "date": "2022-06-11",
+    "runtime": 100,
+    "poster": "/pi0iZOEHeA3ih4p1IwAG4x2DZNH.jpg"
+  },
+  "movie/61791": {
+    "title": "Rise of the Planet of the Apes",
+    "date": "2011-08-03",
+    "runtime": 105,
+    "poster": "/oqA45qMyyo1TtrnVEBKxqmTPhbN.jpg"
+  },
+  "movie/635302": {
+    "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
+    "date": "2020-10-16",
+    "runtime": 117,
+    "poster": "/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg"
+  },
+  "movie/637202": {
+    "title": "Fate/Grand Order the Movie: Divine Realm of the Round Table: Camelot 1 Wandering; Agateram",
+    "date": "2020-12-05",
+    "runtime": 90,
+    "poster": "/cGlzqEwMv1OLHi6n8s2wRd4zAMx.jpg"
+  },
+  "movie/637462": {
+    "title": "Fate/Grand Order the Movie: Divine Realm of the Round Table: Camelot 2 Paladin; Agateram",
+    "date": "2021-05-15",
+    "runtime": 96,
+    "poster": "/80agkgUWhjMn72ixSkX8BgUbzdI.jpg"
+  },
+  "movie/653346": {
+    "title": "Kingdom of the Planet of the Apes",
+    "date": "2024-05-08",
+    "runtime": 145,
+    "poster": "/gKkl37BQuKTanygYQG1pyYgLVgf.jpg"
+  },
+  "movie/671": {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "date": "2001-11-16",
+    "runtime": 152,
+    "poster": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg"
+  },
+  "movie/672": {
+    "title": "Harry Potter and the Chamber of Secrets",
+    "date": "2002-11-13",
+    "runtime": 161,
+    "poster": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg"
+  },
+  "movie/673": {
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "date": "2004-05-31",
+    "runtime": 141,
+    "poster": "/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg"
+  },
+  "movie/674": {
+    "title": "Harry Potter and the Goblet of Fire",
+    "date": "2005-11-16",
+    "runtime": 157,
+    "poster": "/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg"
+  },
+  "movie/675": {
+    "title": "Harry Potter and the Order of the Phoenix",
+    "date": "2007-07-08",
+    "runtime": 138,
+    "poster": "/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg"
+  },
+  "movie/679": {
+    "title": "Aliens",
+    "date": "1986-07-18",
+    "runtime": 137,
+    "poster": "/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg"
+  },
+  "movie/685274": {
+    "title": "Mobile Suit Gundam Hathaway",
+    "date": "2021-06-11",
+    "runtime": 96,
+    "poster": "/6gw8onh4FKsruBA7Oouv01EFxzn.jpg"
+  },
+  "movie/70981": {
+    "title": "Prometheus",
+    "date": "2012-05-30",
+    "runtime": 124,
+    "poster": "/qsYQflQhOuhDpQ0W2aOcwqgDAeI.jpg"
+  },
+  "movie/76170": {
+    "title": "The Wolverine",
+    "date": "2013-07-24",
+    "runtime": 126,
+    "poster": "/t2wVAcoRlKvEIVSbiYDb8d0QqqS.jpg"
+  },
+  "movie/767": {
+    "title": "Harry Potter and the Half-Blood Prince",
+    "date": "2009-07-15",
+    "runtime": 153,
+    "poster": "/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg"
+  },
+  "movie/8077": {
+    "title": "Alien³",
+    "date": "1992-05-22",
+    "runtime": 114,
+    "poster": "/xh5wI0UoW7DfS1IyLy3d2CgrCEP.jpg"
+  },
+  "movie/8078": {
+    "title": "Alien Resurrection",
+    "date": "1997-11-12",
+    "runtime": 109,
+    "poster": "/9aRDMlU5Zwpysilm0WCWzU2PCFv.jpg"
+  },
+  "movie/810693": {
+    "title": "Jujutsu Kaisen 0",
+    "date": "2021-12-24",
+    "runtime": 105,
+    "poster": "/23oJaeBh0FDk2mQ2P240PU9Xxfh.jpg"
+  },
+  "movie/823464": {
+    "title": "Godzilla x Kong: The New Empire",
+    "date": "2024-03-27",
+    "runtime": 115,
+    "poster": "/z1p34vh7dEOnLDmyCrlUVLuoDzd.jpg"
+  },
+  "movie/82992": {
+    "title": "Fast & Furious 6",
+    "date": "2013-05-21",
+    "runtime": 130,
+    "poster": "/thSmnRdrzPBBospIOJjLZBReqzo.jpg"
+  },
+  "movie/829920": {
+    "title": "Fate/Grand Order Final Singularity – Grand Temple of Time: Solomon",
+    "date": "2021-07-30",
+    "runtime": 94,
+    "poster": "/rTpw3z1OJkRfCWlIDvS28TCcoXy.jpg"
+  },
+  "movie/869": {
+    "title": "Planet of the Apes",
+    "date": "2001-07-26",
+    "runtime": 120,
+    "poster": "/3ZWsuP5rExMSji7erxnb1P5SK6F.jpg"
+  },
+  "movie/871": {
+    "title": "Planet of the Apes",
+    "date": "1968-02-07",
+    "runtime": 112,
+    "poster": "/2r9iKnlSYEk4daQadsXfcjHfIjQ.jpg"
+  },
+  "movie/910850": {
+    "title": "MOBILE SUIT GUNDAM HATHAWAY The Sorcery of Nymph Circe",
+    "date": "2026-01-30",
+    "runtime": 115,
+    "poster": "/6YkVpc9Dn1L2FHNlLOybpSKeGc7.jpg"
+  },
+  "movie/945961": {
+    "title": "Alien: Romulus",
+    "date": "2024-08-13",
+    "runtime": 119,
+    "poster": "/2uSWRTtCG336nuBiG8jOTEUKSy8.jpg"
+  },
+  "movie/954": {
+    "title": "Mission: Impossible",
+    "date": "1996-05-22",
+    "runtime": 111,
+    "poster": "/l5uxY5m5OInWpcExIpKG6AR3rgL.jpg"
+  },
+  "movie/955": {
+    "title": "Mission: Impossible II",
+    "date": "2000-05-24",
+    "runtime": 123,
+    "poster": "/hfnrual76gPeNFduhD4xzHWpfTw.jpg"
+  },
+  "movie/956": {
+    "title": "Mission: Impossible III",
+    "date": "2006-04-25",
+    "runtime": 126,
+    "poster": "/vKGYCpmQyV9uHybWDzXuII8Los5.jpg"
+  },
+  "movie/9615": {
+    "title": "The Fast and the Furious: Tokyo Drift",
+    "date": "2006-06-03",
+    "runtime": 104,
+    "poster": "/46xqGOwHbh2TH2avWSw3SMXph4E.jpg"
+  },
+  "movie/968051": {
+    "title": "The Nun II",
+    "date": "2023-09-06",
+    "runtime": 110,
+    "poster": "/5gzzkR7y3hnY8AD1wXjCnVlHba5.jpg"
+  },
+  "movie/9799": {
+    "title": "The Fast and the Furious",
+    "date": "2001-06-22",
+    "runtime": 106,
+    "poster": "/gqY0ITBgT7A82poL9jv851qdnIb.jpg"
+  },
+  "tv/12609": {
+    "title": "Dragon Ball",
+    "date": "1986-02-26",
+    "episodes": 153,
+    "runtime": 3825,
+    "poster": "/onCLyCOgszTIyyVs2XKYSkKPOPG.jpg"
+  },
+  "tv/12697": {
+    "title": "Dragon Ball GT",
+    "date": "1996-02-07",
+    "episodes": 64,
+    "runtime": 1600,
+    "poster": "/rLHhDpv6rrhuzBjNzaMRNv2fng.jpg"
+  },
+  "tv/12971": {
+    "title": "Dragon Ball Z",
+    "date": "1989-04-26",
+    "episodes": 291,
+    "runtime": 7322,
+    "poster": "/oQ5CnVj3TRifXl2bIOri6H6rfNe.jpg"
+  },
+  "tv/13674": {
+    "title": "Mobile Suit Zeta Gundam",
+    "date": "1985-03-02",
+    "episodes": 50,
+    "runtime": 1200,
+    "poster": "/dGH9LyV1UMgvbkv1WUEobcTqK5W.jpg"
+  },
+  "tv/1429": {
+    "title": "Attack on Titan",
+    "date": "2013-04-07",
+    "episodes": 87,
+    "runtime": 2087,
+    "poster": "/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg"
+  },
+  "tv/1429/season/1": {
+    "title": "Season 1",
+    "date": "2013-04-07",
+    "episodes": 25,
+    "runtime": 600,
+    "poster": "/gC78bsXhdU2PwT3FkLcn8R5YcHb.jpg"
+  },
+  "tv/1429/season/2": {
+    "title": "Season 2",
+    "date": "2017-04-01",
+    "episodes": 12,
+    "runtime": 288,
+    "poster": "/2fhK0wbFixskgRyuq6YvaMn75et.jpg"
+  },
+  "tv/1429/season/3": {
+    "title": "Season 3",
+    "date": "2018-07-23",
+    "episodes": 22,
+    "runtime": 528,
+    "poster": "/ynow2o9v0G341PLv1chCRDufCgc.jpg"
+  },
+  "tv/1429/season/4": {
+    "title": "The Final Season",
+    "date": "2020-12-07",
+    "episodes": 28,
+    "runtime": 671,
+    "poster": "/sfbSjGlLHsvFQrMUSNR9RrwZgV1.jpg"
+  },
+  "tv/157239": {
+    "title": "Alien: Earth",
+    "date": "2025-08-12",
+    "episodes": 8,
+    "runtime": 454,
+    "poster": "/yueXS3q8BtoWekcHOATFHicLl3e.jpg"
+  },
+  "tv/196400": {
+    "title": "Mobile Suit Gundam: The Witch from Mercury",
+    "date": "2022-10-02",
+    "episodes": 24,
+    "runtime": 593,
+    "poster": "/gBkDlMaAVOVMRWWlRUHhkLAhNE3.jpg"
+  },
+  "tv/20111": {
+    "title": "Mobile Suit Gundam SEED",
+    "date": "2002-10-05",
+    "episodes": 100,
+    "runtime": 2400,
+    "poster": "/rWgdDIq4JeaI36KdmLPkYcQjBQ3.jpg"
+  },
+  "tv/202411": {
+    "title": "Monarch: Legacy of Monsters",
+    "date": "2023-11-16",
+    "episodes": 20,
+    "runtime": 970,
+    "poster": "/7LBbaEaLSbqdviBYaSS1rRPMnrs.jpg"
+  },
+  "tv/21730": {
+    "title": "Mobile Suit Gundam Wing",
+    "date": "1995-04-07",
+    "episodes": 49,
+    "runtime": 1203,
+    "poster": "/ggHmrZpipHfdEqaGQbv4JrWv0f6.jpg"
+  },
+  "tv/21731": {
+    "title": "Mobile Suit Gundam",
+    "date": "1979-04-07",
+    "episodes": 43,
+    "runtime": 1075,
+    "poster": "/BMqben5yxK5bBdHALi9jfyp517.jpg"
+  },
+  "tv/21732": {
+    "title": "Mobile Suit Gundam 00",
+    "date": "2007-10-06",
+    "episodes": 50,
+    "runtime": 1250,
+    "poster": "/1uEgsZ47dtBCoKLlL9edQ0QMrRF.jpg"
+  },
+  "tv/229858": {
+    "title": "Fate/strange Fake",
+    "date": "2024-12-31",
+    "episodes": 13,
+    "runtime": 315,
+    "poster": "/2r5MEaLYl5lZxzgfSmrDybipngl.jpg"
+  },
+  "tv/236994": {
+    "title": "Dragon Ball DAIMA",
+    "date": "2024-10-11",
+    "episodes": 20,
+    "runtime": 488,
+    "poster": "/lMULbSFZNXUC87MqOZQ4SSV9DXI.jpg"
+  },
+  "tv/31910": {
+    "title": "Naruto Shippūden",
+    "date": "2007-02-15",
+    "episodes": 500,
+    "runtime": 11500,
+    "poster": "/kV27j3Nz4d5z8u6mN3EJw9RiLg2.jpg"
+  },
+  "tv/37858": {
+    "title": "Fate/stay night",
+    "date": "2006-01-07",
+    "episodes": 24,
+    "runtime": 577,
+    "poster": "/x7nYPOveHhINREhTtwBHot9ersB.jpg"
+  },
+  "tv/42509": {
+    "title": "Steins;Gate",
+    "date": "2011-04-06",
+    "episodes": 24,
+    "runtime": 576,
+    "poster": "/96R4bV7dB8ramaWceNKsxvJgCUd.jpg"
+  },
+  "tv/43887": {
+    "title": "Mobile Suit Gundam: The 08th MS Team",
+    "date": "1996-01-25",
+    "episodes": 12,
+    "runtime": 303,
+    "poster": "/tzr1YdnPSIWMMgyb6Uzi3f9I8p3.jpg"
+  },
+  "tv/45500": {
+    "title": "Mobile Suit Gundam Unicorn",
+    "date": "2010-02-20",
+    "episodes": 7,
+    "runtime": 439,
+    "poster": "/221Lo3L1iTg76hWhyzg62C5OYOK.jpg"
+  },
+  "tv/45845": {
+    "title": "Fate/Zero",
+    "date": "2011-10-02",
+    "episodes": 25,
+    "runtime": 626,
+    "poster": "/chUbHBiMX7buj8TzOEIjHHPCJfF.jpg"
+  },
+  "tv/46195": {
+    "title": "Monogatari",
+    "date": "2009-07-03",
+    "episodes": 73,
+    "runtime": 1831,
+    "poster": "/zCEjjb1NH3LLsWeZx47wOeqkezf.jpg"
+  },
+  "tv/46195/season/1": {
+    "title": "Bakemonogatari",
+    "date": "2009-07-03",
+    "episodes": 12,
+    "runtime": 300,
+    "poster": "/d7ql7zntjfCw9svB2nxMiJZSGKr.jpg"
+  },
+  "tv/46195/season/2": {
+    "title": "Nisemonogatari",
+    "date": "2012-01-08",
+    "episodes": 11,
+    "runtime": 275,
+    "poster": "/qbX28SjRreSzDsD7rGxkakjnjSQ.jpg"
+  },
+  "tv/46195/season/3": {
+    "title": "Monogatari Series: Second Season",
+    "date": "2013-07-07",
+    "episodes": 23,
+    "runtime": 575,
+    "poster": "/pEwR4WUyrSSvJHi5KJX7RRNvvbD.jpg"
+  },
+  "tv/46195/season/4": {
+    "title": "Owarimonogatari",
+    "date": "2015-10-04",
+    "episodes": 12,
+    "runtime": 325,
+    "poster": "/2OlvWAQQv84MlwEZOzVgSbMTtx0.jpg"
+  },
+  "tv/46195/season/5": {
+    "title": "MONOGATARI Series OFF & MONSTER Season",
+    "date": "2024-07-06",
+    "episodes": 15,
+    "runtime": 356,
+    "poster": "/pSxEbyqv4WFPj5NUeDDx0rdB8fC.jpg"
+  },
+  "tv/46260": {
+    "title": "Naruto",
+    "date": "2002-10-03",
+    "episodes": 220,
+    "runtime": 5280,
+    "poster": "/xppeysfvDKVx775MFuH8Z9BlpMk.jpg"
+  },
+  "tv/46512": {
+    "title": "Mobile Suit Gundam 0080: War in the Pocket",
+    "date": "1989-03-25",
+    "episodes": 6,
+    "runtime": 160,
+    "poster": "/ju1llP8kQROLHQ2xqOscSUrEHb4.jpg"
+  },
+  "tv/5660": {
+    "title": "Mobile Suit Gundam ZZ",
+    "date": "1986-03-01",
+    "episodes": 47,
+    "runtime": 1175,
+    "poster": "/tAM7YgSlZx2XSP0o3hS6IQtRDUm.jpg"
+  },
+  "tv/61415": {
+    "title": "Fate/stay night [Unlimited Blade Works]",
+    "date": "2014-10-12",
+    "episodes": 25,
+    "runtime": 643,
+    "poster": "/jyqi5BkDoKKIA2WAoz3HBtRHld3.jpg"
+  },
+  "tv/61415/season/1": {
+    "title": "Season 1",
+    "date": "2014-10-12",
+    "episodes": 12,
+    "runtime": 330,
+    "poster": "/ituw0pLNRC41C2BjZMgDgDvBfbd.jpg"
+  },
+  "tv/61415/season/2": {
+    "title": "Season 2",
+    "date": "2015-04-05",
+    "episodes": 13,
+    "runtime": 313,
+    "poster": "/uhcg2xL85y32NUdpVA4kkBO4Zh.jpg"
+  },
+  "tv/61709": {
+    "title": "Dragon Ball Z Kai",
+    "date": "2009-04-05",
+    "episodes": 158,
+    "runtime": 4108,
+    "poster": "/ojsPI8fNwcecKLhVC4rB4ZZhFMc.jpg"
+  },
+  "tv/62715": {
+    "title": "Dragon Ball Super",
+    "date": "2015-07-05",
+    "episodes": 131,
+    "runtime": 3144,
+    "poster": "/qEUrbXJ2qt4Rg84Btlx4STOhgte.jpg"
+  },
+  "tv/64375": {
+    "title": "Mobile Suit Gundam: Iron-Blooded Orphans",
+    "date": "2015-10-04",
+    "episodes": 50,
+    "runtime": 1250,
+    "poster": "/x5M9yxvBhrUP4rsKSl3d9VzK7O.jpg"
+  },
+  "tv/70881": {
+    "title": "Boruto: Naruto Next Generations",
+    "date": "2017-04-05",
+    "episodes": 293,
+    "runtime": 7039,
+    "poster": "/e0B6i48kxdRkMcK4tR4YNfXGWOc.jpg"
+  },
+  "tv/72304": {
+    "title": "Fate/Apocrypha",
+    "date": "2017-07-02",
+    "episodes": 25,
+    "runtime": 575,
+    "poster": "/aQvABf8fwwHSdYbMk1Ir3NnvcSp.jpg"
+  },
+  "tv/72677": {
+    "title": "Mobile Suit Gundam 0083: Stardust Memory",
+    "date": "1991-05-23",
+    "episodes": 13,
+    "runtime": 390,
+    "poster": "/zLO8bidHA5S26kxI5DufYscgMsU.jpg"
+  },
+  "tv/72710": {
+    "title": "The Continental: From the World of John Wick",
+    "date": "2023-09-22",
+    "episodes": 3,
+    "runtime": 265,
+    "poster": "/2urdwqEL9FRkGMKAkhfvWTALG00.jpg"
+  },
+  "tv/78102": {
+    "title": "Steins;Gate 0",
+    "date": "2018-04-12",
+    "episodes": 23,
+    "runtime": 552,
+    "poster": "/4ztfZujsNN0c66OkE4ZKFQ0ZQTf.jpg"
+  },
+  "tv/85368": {
+    "title": "Lord El-Melloi II's Case Files {Rail Zeppelin} Grace note",
+    "date": "2019-07-07",
+    "episodes": 13,
+    "runtime": 299,
+    "poster": "/kKtYZGaIFuG7vztNdxkoBq324s0.jpg"
+  },
+  "tv/85937": {
+    "title": "Demon Slayer: Kimetsu no Yaiba",
+    "date": "2019-04-06",
+    "episodes": 63,
+    "runtime": 1617,
+    "poster": "/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg"
+  },
+  "tv/85937/season/1": {
+    "title": "Unwavering Resolve Arc",
+    "date": "2019-04-06",
+    "episodes": 26,
+    "runtime": 598,
+    "poster": "/bV0ZCL0IqrTQKClu6EtXlZaJevD.jpg"
+  },
+  "tv/85937/season/2": {
+    "title": "Mugen Train Arc",
+    "date": "2021-10-10",
+    "episodes": 7,
+    "runtime": 167,
+    "poster": "/pLGjaDyg2LeA2d9KZxBZCiiqC2B.jpg"
+  },
+  "tv/85937/season/3": {
+    "title": "Entertainment District Arc",
+    "date": "2021-12-05",
+    "episodes": 11,
+    "runtime": 295,
+    "poster": "/gbmhcOtre5SeBgwR9gvTpUra5kZ.jpg"
+  },
+  "tv/85937/season/4": {
+    "title": "Swordsmith Village Arc",
+    "date": "2023-04-09",
+    "episodes": 11,
+    "runtime": 315,
+    "poster": "/6gD7G8HQay1X8mHiFVttWJ3czYb.jpg"
+  },
+  "tv/85937/season/5": {
+    "title": "Hashira Training Arc",
+    "date": "2024-05-12",
+    "episodes": 8,
+    "runtime": 242,
+    "poster": "/axI3BUZgTYz36IYtUtRhivtspUo.jpg"
+  },
+  "tv/90677": {
+    "title": "Fate/Grand Order Absolute Demonic Front: Babylonia",
+    "date": "2019-10-05",
+    "episodes": 21,
+    "runtime": 485,
+    "poster": "/4XjD4Hbyhnn9wakIehZJJ5rtqxn.jpg"
+  },
+  "tv/95479": {
+    "title": "JUJUTSU KAISEN",
+    "date": "2020-10-03",
+    "episodes": 59,
+    "runtime": 1427,
+    "poster": "/6qQzMJG27XOJsyAEEIisoJB45j2.jpg"
+  }
+}

@@ -5,7 +5,7 @@ Marketing site for [ShowSeek](https://play.google.com/store/apps/details?id=app.
 ## Stack
 
 - React 19 + TypeScript, bundled with Vite
-- React Router (homepage, `/guides` pages and a 404 route)
+- React Router (homepage, `/guides` and `/watch` pages, and a 404 route)
 - Tailwind CSS v4 (via `@tailwindcss/vite`)
 - [Base UI](https://base-ui.com/) for the tabs, tooltip and mobile menu dialog
 - [Hugeicons](https://hugeicons.com/) for icons
@@ -40,6 +40,7 @@ src/
   content.ts        # homepage copy, links and reviews
   faq.ts            # homepage FAQ (also emitted as FAQPage JSON-LD)
   guides/           # one data file per guide, registered in guides/index.ts
+  watch/            # watch-order pages: orders/ (one file per franchise), tmdb.json snapshot, helpers
   routes.ts         # every prerendered page: path, output file, <head> and JSON-LD
   seo.ts            # site URL and JSON-LD helpers
   sections/         # Hero, Features, Reviews, Imports, Faq, Download, Footer
@@ -59,6 +60,18 @@ Most homepage text changes (links, reviews) happen in `src/content.ts`.
 ## Guides
 
 To add a guide, create a `Guide` in `src/guides/` and add it to the list in `src/guides/index.ts`. Its route, prerendered page, `<head>`, JSON-LD, sitemap entry, footer link and `/guides` card follow from that. Set `guide` on the matching card in `src/sections/Imports.tsx` to link it from the homepage. When you change a guide's content, bump its `updated` date so the sitemap's `lastmod` tells search engines to recrawl it.
+
+## Watch orders
+
+Franchise watch orders live in `src/watch/orders/`, one `WatchOrder` per file, registered in `src/watch/index.ts`. Like guides, each gets a prerendered page under `/watch/`, its own `<head>`, ItemList/FAQPage/BreadcrumbList JSON-LD, a sitemap entry and a footer link.
+
+Titles reference TMDB as string literals (`"movie/954"`, `"tv/1429/season/2"`). Posters, years, runtimes and episode counts come from `src/watch/tmdb.json`, a committed snapshot, so builds never call TMDB. After adding or changing a ref, refresh the snapshot. It needs a TMDB v3 key in `TMDB_API_KEY`, read from the git-ignored `.env` file or the environment:
+
+```bash
+npm run fetch:watch
+```
+
+The build fails if a ref has no snapshot data, a `release-order`/`broadcast-order`/`main-story` list isn't in date order, or a related slug doesn't exist. Entries TMDB doesn't list separately (some anime specials) can omit `ref` and give `title`, `year` and `episodes` instead.
 
 Guide facts come from the app repo (`show-seek`, mainly `src/i18n/locales/en-US.json`), but the copy is written for search rather than copied from the app. Don't mention Premium on these pages.
 

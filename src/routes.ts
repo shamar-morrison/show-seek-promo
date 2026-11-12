@@ -1,4 +1,5 @@
 import { homeFaqs } from "./faq";
+import { resolveEntry, watchOrders, watchPath, type WatchOrder } from "./watch";
 import { guidePath, guides, type Guide } from "./guides";
 import { absoluteUrl, breadcrumbLd, faqPageLd, howToLd, type PageMeta } from "./seo";
 import { links } from "./content";
@@ -7,6 +8,7 @@ import { links } from "./content";
 // sitemap from this list; App.tsx sets document.title from it on client-side navigation.
 
 export const guidesIndexPath = "/guides";
+export const watchIndexPath = "/watch";
 
 const home: PageMeta = {
   path: "/",
@@ -69,7 +71,60 @@ function guideMeta(guide: Guide): PageMeta {
   };
 }
 
-export const pages: PageMeta[] = [home, guidesIndex, ...guides.map(guideMeta)];
+const watchIndex: PageMeta = {
+  path: watchIndexPath,
+  file: "watch.html",
+  title: "Watch Orders for Anime and Movie Franchises | ShowSeek",
+  description:
+    "Release order, chronological order and where to start for Monogatari, Fate, Attack on Titan, Gundam, Mission: Impossible, John Wick, Conjuring and X-Men.",
+  updated: "2026-11-11",
+  jsonLd: [
+    breadcrumbLd([
+      { name: "Home", path: "/" },
+      { name: "Watch orders", path: watchIndexPath },
+    ]),
+  ],
+};
+
+function watchOrderMeta(order: WatchOrder): PageMeta {
+  const path = watchPath(order.slug);
+  const primary = order.lists[0];
+  return {
+    path,
+    file: `watch/${order.slug}.html`,
+    title: order.title,
+    description: order.description,
+    updated: order.updated,
+    jsonLd: [
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: primary.heading,
+        url: `${absoluteUrl(path)}#${primary.id}`,
+        itemListOrder: "https://schema.org/ItemListOrderAscending",
+        numberOfItems: primary.entries.length,
+        itemListElement: primary.entries.map((entry, i) => {
+          const e = resolveEntry(entry);
+          return { "@type": "ListItem", position: i + 1, name: e.year ? `${e.displayTitle} (${e.year})` : e.displayTitle };
+        }),
+      },
+      faqPageLd(order.faqs),
+      breadcrumbLd([
+        { name: "Home", path: "/" },
+        { name: "Watch orders", path: watchIndexPath },
+        { name: order.name, path },
+      ]),
+    ],
+  };
+}
+
+export const pages: PageMeta[] = [
+  home,
+  guidesIndex,
+  ...guides.map(guideMeta),
+  watchIndex,
+  ...watchOrders.map(watchOrderMeta),
+];
 
 export const pageForPath = (pathname: string) => {
   const path = pathname.replace(/\/+$/, "") || "/";

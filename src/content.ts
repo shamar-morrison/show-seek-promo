@@ -12,6 +12,7 @@ export const navItems = [
   { label: "Features", href: "/#features" },
   { label: "Reviews", href: "/#reviews" },
   { label: "Guides", href: "/guides" },
+  { label: "Watch orders", href: "/watch" },
   { label: "FAQ", href: "/#faq" },
   { label: "Download", href: "/#download" },
 ];

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/prerender.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fetch:watch": "node --env-file-if-exists=.env scripts/fetch-watch-data.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
