@@ -217,6 +217,10 @@ export const tvTimeImport: Guide = {
             <Link to={guidePath("stremio-sync")}>ShowSeek Stremio add-on</Link> marks what you finish as watched
             automatically, so your history stays up to date without logging every episode by hand.
           </p>
+          <p>
+            Still weighing up your options? See how nine apps compare in{" "}
+            <Link to="/compare/tv-time-alternatives">the best TV Time alternatives</Link>.
+          </p>
         </>
       ),
     },

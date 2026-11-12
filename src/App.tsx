@@ -9,6 +9,8 @@ import { GuidePage } from "./pages/GuidePage";
 import { GuidesIndex } from "./pages/GuidesIndex";
 import { guidePath, guides } from "./guides";
 import { WatchIndex } from "./pages/WatchIndex";
+import { ComparePage } from "./pages/ComparePage";
+import { COMPARE_PATH } from "./compare/tvTimeAlternatives";
 import { WatchOrderPage } from "./pages/WatchOrderPage";
 import { watchOrders, watchPath } from "./watch";
 import { guidesIndexPath, pageForPath, watchIndexPath } from "./routes";
@@ -50,6 +52,7 @@ export default function App() {
           {guides.map((g) => (
             <Route key={g.slug} path={guidePath(g.slug)} element={<GuidePage guide={g} />} />
           ))}
+          <Route path={COMPARE_PATH} element={<ComparePage />} />
           <Route path={watchIndexPath} element={<WatchIndex />} />
           {watchOrders.map((o) => (
             <Route key={o.slug} path={watchPath(o.slug)} element={<WatchOrderPage order={o} />} />

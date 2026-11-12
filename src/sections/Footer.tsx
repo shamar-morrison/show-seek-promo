@@ -55,6 +55,11 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/compare/tv-time-alternatives" className={linkClass}>
+                TV Time alternatives
+              </Link>
+            </li>
           </ul>
         </div>
 

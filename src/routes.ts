@@ -1,4 +1,5 @@
 import { homeFaqs } from "./faq";
+import { apps, compareFaqs, compareMeta, COMPARE_PATH } from "./compare/tvTimeAlternatives";
 import { resolveEntry, watchOrders, watchPath, type WatchOrder } from "./watch";
 import { guidePath, guides, type Guide } from "./guides";
 import { absoluteUrl, breadcrumbLd, faqPageLd, howToLd, type PageMeta } from "./seo";
@@ -118,10 +119,34 @@ function watchOrderMeta(order: WatchOrder): PageMeta {
   };
 }
 
+const tvTimeAlternatives: PageMeta = {
+  path: COMPARE_PATH,
+  file: "compare/tv-time-alternatives.html",
+  title: compareMeta.title,
+  description: compareMeta.description,
+  updated: compareMeta.updated,
+  jsonLd: [
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "TV Time alternatives compared",
+      url: `${absoluteUrl(COMPARE_PATH)}#compared`,
+      numberOfItems: apps.length,
+      itemListElement: apps.map((app, i) => ({ "@type": "ListItem", position: i + 1, name: app.name })),
+    },
+    faqPageLd(compareFaqs),
+    breadcrumbLd([
+      { name: "Home", path: "/" },
+      { name: "TV Time alternatives", path: COMPARE_PATH },
+    ]),
+  ],
+};
+
 export const pages: PageMeta[] = [
   home,
   guidesIndex,
   ...guides.map(guideMeta),
+  tvTimeAlternatives,
   watchIndex,
   ...watchOrders.map(watchOrderMeta),
 ];
