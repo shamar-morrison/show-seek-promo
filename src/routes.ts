@@ -42,7 +42,7 @@ const guidesIndex: PageMeta = {
   file: "guides.html",
   title: "ShowSeek Guides: Import and Sync Your Watch History",
   description:
-    "Step-by-step guides for moving your watch history to ShowSeek: import from TV Time, IMDb and Simkl, sync with Trakt, and track Stremio automatically.",
+    "Step-by-step guides for moving your watch history to ShowSeek: import from TV Time, IMDb, Simkl and Showly, sync with Trakt, and track Stremio automatically.",
   updated: "2026-11-11",
   jsonLd: [
     breadcrumbLd([

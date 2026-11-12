@@ -22,7 +22,7 @@ export const simklImport: Guide = {
   h1: "Move your Simkl history to ShowSeek.",
   intro:
     "Switching from Simkl doesn't mean marking hundreds of episodes as watched all over again. Simkl lets you download a backup of your whole library, and ShowSeek imports it directly: TV shows, anime and movies, with the dates you watched them, your ratings and your watchlist. It takes a few minutes, and your Simkl statuses land in the matching ShowSeek lists.",
-  updated: "2026-11-11",
+  updated: "2026-11-12",
   stepsHeading: "How to import Simkl into ShowSeek in 5 steps",
   steps: [
     {
@@ -186,5 +186,5 @@ export const simklImport: Guide = {
       a: "Plan to Watch goes to Should Watch, Watching and On Hold go to Currently Watching, and Dropped goes to Dropped. Completed shows go to Already Watched, or Currently Watching if new episodes are still coming.",
     },
   ],
-  related: ["tv-time-import", "trakt-sync"],
+  related: ["tv-time-import", "showly-import"],
 };

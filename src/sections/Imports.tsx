@@ -32,6 +32,12 @@ const sources: Source[] = [
     guide: "simkl-import",
   },
   {
+    brand: "showly",
+    title: "Showly import",
+    body: "Coming from Showly? Export a backup and your shows, watched episodes, movies, ratings and custom lists come with you.",
+    guide: "showly-import",
+  },
+  {
     brand: "tvtime",
     title: "TV Time import",
     body: "Saved your data before TV Time shut down? Bring your official data request, or an export from TV Time Out, Liberator or Data Extractor.",
@@ -46,8 +52,7 @@ const sources: Source[] = [
   },
 ];
 
-// 5 cards: a row of 3 then a row of 2 on desktop; on tablet the odd last card fills its row.
-const spans = ["lg:col-span-2", "lg:col-span-2", "lg:col-span-2", "lg:col-span-3", "md:max-lg:col-span-2 lg:col-span-3"];
+// 6 cards: two rows of 3 on desktop, three rows of 2 on tablet.
 
 export function Imports() {
   return (
@@ -61,9 +66,9 @@ export function Imports() {
             Bring your history over in minutes, then let what you watch elsewhere keep ShowSeek up to date.
           </p>
         </Reveal>
-        <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-6">
+        <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
           {sources.map((s, i) => (
-            <Reveal key={s.brand} index={i + 1} className={`flex flex-col items-start rounded-3xl border border-line bg-surface p-8 ${spans[i]}`}>
+            <Reveal key={s.brand} index={i + 1} className={`flex flex-col items-start rounded-3xl border border-line bg-surface p-8`}>
               <BrandTile brand={s.brand} />
               <h3 className="mt-6 font-display text-2xl font-bold tracking-tight">{s.title}</h3>
               <p className="mt-2 leading-relaxed text-muted">{s.body}</p>

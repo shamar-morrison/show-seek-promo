@@ -53,7 +53,7 @@ export const tvTimeImport: Guide = {
   h1: "Import your TV Time data into ShowSeek.",
   intro:
     "TV Time shut down in July 2026. If you saved an export before it closed, your years of watched episodes, ratings and lists aren't lost. ShowSeek imports TV Time exports directly on Android, from all four of the tools people used to save their data, so you can pick up exactly where you left off without creating a Trakt account first.",
-  updated: "2026-11-11",
+  updated: "2026-11-12",
   stepsHeading: "How to import TV Time data in 5 steps",
   steps: [
     {
@@ -159,8 +159,8 @@ export const tvTimeImport: Guide = {
           </ul>
           <p>
             If your history also lives somewhere else, you can bring it in from there instead: see the guides for{" "}
-            <Link to={guidePath("trakt-sync")}>Trakt</Link>, <Link to={guidePath("imdb-import")}>IMDb</Link> and{" "}
-            <Link to={guidePath("simkl-import")}>Simkl</Link>.
+            <Link to={guidePath("trakt-sync")}>Trakt</Link>, <Link to={guidePath("imdb-import")}>IMDb</Link>,{" "}
+            <Link to={guidePath("simkl-import")}>Simkl</Link> and <Link to={guidePath("showly-import")}>Showly</Link>.
           </p>
         </>
       ),

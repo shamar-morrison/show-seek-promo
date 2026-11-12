@@ -45,3 +45,17 @@ export function SimklLogo({ className = "" }: { className?: string }) {
     </svg>
   );
 }
+
+// Not in Simple Icons: redrawn from the Showly app icon, a bold coral S on a dark tile.
+export function ShowlyLogo({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path
+        d="M17.6 8C17.2 5.6 15 4.2 12 4.2 8.8 4.2 6.6 5.8 6.6 8.2c0 2.5 2.2 3.3 5.3 4 3.1.7 5.5 1.5 5.5 4 0 2.5-2.3 3.9-5.4 3.9-3.3 0-5.5-1.5-5.8-4.1"
+        stroke="#f44b3f"
+        strokeWidth="4"
+        strokeLinecap="butt"
+      />
+    </svg>
+  );
+}

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
-import { ImdbLogo, SimklLogo, StremioLogo, TraktLogo, TvTimeLogo } from "./BrandLogos";
+import { ImdbLogo, ShowlyLogo, SimklLogo, StremioLogo, TraktLogo, TvTimeLogo } from "./BrandLogos";
 
-export type Brand = "trakt" | "imdb" | "simkl" | "tvtime" | "stremio";
+export type Brand = "trakt" | "imdb" | "simkl" | "showly" | "tvtime" | "stremio";
 
 type TileSpec = { name: string; tile: string; logo: (size: "md" | "lg") => ReactNode };
 
@@ -20,6 +20,11 @@ const tiles: Record<Brand, TileSpec> = {
     name: "Simkl",
     tile: "bg-black text-white ring-1 ring-white/15 ring-inset",
     logo: (s) => <SimklLogo className={s === "lg" ? "size-9" : "size-7"} />,
+  },
+  showly: {
+    name: "Showly",
+    tile: "bg-[#25262a] ring-1 ring-white/15 ring-inset",
+    logo: (s) => <ShowlyLogo className={s === "lg" ? "size-9" : "size-7"} />,
   },
   tvtime: {
     name: "TV Time",

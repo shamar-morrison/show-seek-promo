@@ -13,8 +13,8 @@ export const homeFaqs: Faq[] = [
     link: { href: "/compare/tv-time-alternatives", label: "Compare TV Time alternatives" },
   },
   {
-    q: "Can I import my watch history from TV Time, Trakt, IMDb or Simkl?",
-    a: "Yes. ShowSeek imports your history from TV Time, IMDb and Simkl, and syncs with Trakt. If you saved a TV Time export before the shutdown, ShowSeek reads it directly, so you don't need to load it into Trakt first.",
+    q: "Can I import my watch history from TV Time, Trakt, IMDb, Simkl or Showly?",
+    a: "Yes. ShowSeek imports your history from TV Time, IMDb, Simkl and Showly, and syncs with Trakt. If you saved a TV Time export before the shutdown, ShowSeek reads it directly, so you don't need to load it into Trakt first.",
     link: { href: "/guides", label: "See the import guides" },
   },
   {

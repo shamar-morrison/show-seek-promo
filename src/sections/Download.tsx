@@ -33,7 +33,7 @@ export function Download() {
           Start your watch library today.
         </h2>
         <p className="mt-5 max-w-[44ch] text-lg leading-relaxed text-fg/80">
-          Free on Android. Bring your history from Trakt, IMDb, Simkl, TV Time and more.
+          Free on Android. Bring your history from Trakt, IMDb, Simkl, Showly, TV Time and more.
         </p>
         <StoreButtons className="mt-10 justify-center" />
       </Reveal>
