@@ -11,13 +11,13 @@ export const stremioSync: Guide = {
   slug: "stremio-sync",
   brand: "stremio",
   label: "Stremio sync",
-  summary: "Track Stremio automatically: movies, shows and anime you finish are marked as watched in ShowSeek.",
-  title: "Sync Stremio Watch History with the ShowSeek Add-on",
+  summary: "Scrobble Stremio without Trakt: movies, shows and anime you finish are marked as watched in ShowSeek.",
+  title: "Stremio Scrobbling Without Trakt: The ShowSeek Add-on",
   description:
-    "Track what you watch in Stremio automatically. The ShowSeek add-on marks movies, episodes and anime as watched, no Trakt account needed. Set up in 2 minutes.",
+    "Scrobble Stremio without Trakt. The ShowSeek add-on marks the movies, episodes and anime you finish in Stremio as watched in ShowSeek. Set up in 2 minutes.",
   h1: "Sync your Stremio watch history to ShowSeek.",
   intro:
-    "Stremio is where you watch. ShowSeek is where you keep track. The ShowSeek add-on connects the two, so every movie and episode you finish in Stremio is marked as watched in ShowSeek on its own, anime included. No logging episodes twice, and no Trakt account in the middle.",
+    "Stremio is where you watch. ShowSeek is where you keep track. The ShowSeek add-on connects the two directly, so every movie and episode you finish in Stremio is marked as watched in ShowSeek on its own, anime included. It's scrobbling without Trakt: no Trakt account and no third service in the middle holding your history.",
   updated: "2026-11-11",
   stepsHeading: "How to connect Stremio to ShowSeek in 5 steps",
   steps: [
@@ -82,9 +82,9 @@ export const stremioSync: Guide = {
       heading: "Does Stremio sync work with anime?",
       body: (
         <p>
-          Yes. Anime you play from Stremio's built-in catalogs or from the Anime Kitsu catalog is tracked like any
-          other show. Anime numbering doesn't always line up between catalogs, so an episode that can't be matched with
-          confidence is skipped instead of being marked on the wrong show.
+          Yes. Anime you play from Stremio's built-in catalogs or from the Anime Kitsu catalog is tracked just like
+          any other show. Every episode you finish is marked as watched on the right show and episode in ShowSeek, so
+          long-running series stay in step without any fixing by hand.
         </p>
       ),
     },
@@ -95,23 +95,36 @@ export const stremioSync: Guide = {
         <p>
           Not yet. Add-on sync currently works with the Stremio desktop app and {stremioWeb}. Anything you watch in
           the Stremio phone apps isn't sent to ShowSeek, so you can mark those as watched in ShowSeek yourself. Your
-          phone is only needed once, to create the link.
+          phone is only needed once, to create the link. If you still use Trakt, Stremio's built-in Trakt integration
+          also works in its phone apps, and <Link to={guidePath("trakt-sync")}>ShowSeek's Trakt sync</Link> brings
+          those watches in.
         </p>
       ),
     },
     {
-      id: "vs-trakt",
-      heading: "Stremio sync without Trakt",
+      id: "leaving-trakt",
+      heading: "Leaving Trakt? Keep scrobbling Stremio",
       body: (
         <>
           <p>
-            A lot of Stremio users connect Trakt just to keep a watch history. With ShowSeek you can skip that: the
-            add-on sends your watches straight to your ShowSeek library, and you don't need a Trakt account at all.
+            For years, the usual way to keep a Stremio watch history was to connect Trakt and let it scrobble. If
+            you're moving away from Trakt, you don't have to give that up. The ShowSeek add-on does the same job on
+            its own: Stremio reports what you finish straight to your ShowSeek library, with no Trakt account
+            involved.
           </p>
+          <p>Moving over takes two steps:</p>
+          <ul>
+            <li>
+              <strong>Bring your Trakt history with you, once.</strong> Download your data from Trakt and{" "}
+              <Link to={guidePath("trakt-sync")}>import the Trakt export ZIP</Link> into ShowSeek. You don't need to
+              connect your Trakt account for this.
+            </li>
+            <li>
+              <strong>Install the ShowSeek add-on</strong> using the steps above, and remove the Trakt connection from
+              Stremio if you no longer want it.
+            </li>
+          </ul>
           <p>
-            Already have years of history on Trakt?{" "}
-            <Link to={guidePath("trakt-sync")}>Connect your Trakt account in ShowSeek</Link> to bring it in, and use
-            the add-on for everything you watch from now on.
             Coming from TV Time instead? See the <Link to={guidePath("tv-time-import")}>TV Time import guide</Link>.
           </p>
         </>
@@ -166,8 +179,8 @@ export const stremioSync: Guide = {
       a: "Install the ShowSeek add-on in Stremio. Every movie and episode you finish in the Stremio desktop app or web.stremio.com is then marked as watched in ShowSeek automatically.",
     },
     {
-      q: "Do I need Trakt to sync Stremio with ShowSeek?",
-      a: "No. The ShowSeek add-on sends your watches straight to ShowSeek. You don't need a Trakt account.",
+      q: "Can I scrobble Stremio without Trakt?",
+      a: "Yes. The ShowSeek add-on sends what you finish in Stremio straight to ShowSeek, with no Trakt account. If you're leaving Trakt, import your Trakt export into ShowSeek once and use the add-on from then on.",
     },
     {
       q: "Does ShowSeek sync with the Stremio app on Android or iPhone?",
@@ -179,7 +192,7 @@ export const stremioSync: Guide = {
     },
     {
       q: "Can I sync anime from Stremio?",
-      a: "Yes. Anime from Stremio's catalogs and the Anime Kitsu catalog is tracked. Episodes that can't be matched reliably are skipped rather than marked on the wrong show.",
+      a: "Yes. Anime from Stremio's own catalogs and the Anime Kitsu catalog is tracked just like any other show, and every episode you finish is marked as watched in ShowSeek.",
     },
     {
       q: "How do I stop syncing Stremio with ShowSeek?",
