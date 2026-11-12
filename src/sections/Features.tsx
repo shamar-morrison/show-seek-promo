@@ -16,6 +16,7 @@ import moodShot from "../assets/mood_picker.webp";
 import reminderShot from "../assets/set_reminder.webp";
 import shareShot from "../assets/share_card.webp";
 import { Reveal } from "../components/Reveal";
+import { screenshotSrcSet } from "../screenshots";
 
 type Feature = {
   id: string;
@@ -23,12 +24,15 @@ type Feature = {
   title: string;
   body: string;
   shot: string;
+  /** Base name for the srcset variants in assets/responsive. */
+  shotName: string;
   alt: string;
 };
 
 const features: Feature[] = [
   {
     id: "progress",
+    shotName: "watch_progress",
     icon: Tv01Icon,
     title: "Watch progress",
     body: "See the next episode and how far along you are in every series.",
@@ -37,6 +41,7 @@ const features: Feature[] = [
   },
   {
     id: "lists",
+    shotName: "watch_lists",
     icon: Bookmark02Icon,
     title: "Watch lists",
     body: "Should Watch, Currently Watching, Already Watched, Favorites, plus custom lists you make.",
@@ -45,6 +50,7 @@ const features: Feature[] = [
   },
   {
     id: "shuffle",
+    shotName: "shuffle",
     icon: ShuffleIcon,
     title: "Shuffle picker",
     body: "Can't decide? Shuffle any list and let ShowSeek pick tonight's watch.",
@@ -53,6 +59,7 @@ const features: Feature[] = [
   },
   {
     id: "mood",
+    shotName: "mood_picker",
     icon: SmileIcon,
     title: "Mood picker",
     body: "Cozy, mind-bending or spooky. Find something that fits tonight.",
@@ -61,6 +68,7 @@ const features: Feature[] = [
   },
   {
     id: "reminders",
+    shotName: "set_reminder",
     icon: Notification03Icon,
     title: "Release reminders",
     body: "Get notified on air day or the day before a new episode.",
@@ -69,6 +77,7 @@ const features: Feature[] = [
   },
   {
     id: "share",
+    shotName: "share_card",
     icon: Share08Icon,
     title: "Share cards",
     body: "Turn any title into a card for your story, in portrait, square or landscape.",
@@ -154,11 +163,16 @@ export function Features() {
                 <img
                   key={f.id}
                   src={f.shot}
+                  srcSet={screenshotSrcSet(f.shotName, f.shot)}
+                  // The phone frame is 540 / 620 / 680px tall at the screenshot's aspect ratio.
+                  sizes="(min-width: 1024px) 315px, (min-width: 640px) 290px, 250px"
                   alt={isActive ? f.alt : ""}
                   aria-hidden={!isActive}
                   width={720}
                   height={1564}
                   loading={i === 0 ? "eager" : "lazy"}
+                  // Below the fold: let the hero's images download first.
+                  fetchPriority="low"
                   className={`absolute inset-0 h-full w-full object-contain transition-[opacity,translate,scale] duration-500 ease-out-expo motion-reduce:transition-none ${
                     isActive ? "translate-y-0 scale-100 opacity-100" : "translate-y-3 scale-[0.96] opacity-0"
                   }`}

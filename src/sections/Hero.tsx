@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import heroShot from "../assets/hero.webp";
 import detailShot from "../assets/hero_2.webp";
 import { StoreButtons } from "../components/StoreButtons";
+import { screenshotSrcSet } from "../screenshots";
 
 const step = (i: number) => ({ "--i": i }) as CSSProperties;
 
@@ -35,7 +36,8 @@ function PosterWall() {
                 alt=""
                 width={240}
                 height={360}
-                loading={i < col.length ? "eager" : "lazy"}
+                // Columns 4+ are hidden on phones, and hidden lazy images are never fetched there.
+                loading={i < col.length && c < 4 ? "eager" : "lazy"}
                 className="mb-3 aspect-[2/3] w-full rounded-xl object-cover brightness-[0.55]"
               />
             ))}
@@ -75,6 +77,9 @@ export function Hero() {
         <div className="relative mx-auto h-[520px] w-full max-w-[520px] sm:h-[600px] lg:h-[min(76dvh,680px)]">
           <img
             src={detailShot}
+            srcSet={screenshotSrcSet("hero_2", detailShot)}
+            // 78% of the container height (520 / 600 / up to 680px) at the screenshot's aspect ratio.
+            sizes="(min-width: 1024px) 265px, (min-width: 640px) 235px, 205px"
             alt="ShowSeek title details screen with Watch Trailer and Mark as Watched buttons"
             width={720}
             height={1452}
@@ -83,6 +88,9 @@ export function Hero() {
           />
           <img
             src={heroShot}
+            srcSet={screenshotSrcSet("hero", heroShot)}
+            // Full container height (520 / 600 / up to 680px) at the screenshot's aspect ratio.
+            sizes="(min-width: 1024px) 340px, (min-width: 640px) 300px, 260px"
             alt="ShowSeek home screen showing trending and upcoming movies"
             width={720}
             height={1452}

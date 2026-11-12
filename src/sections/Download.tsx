@@ -13,6 +13,7 @@ export function Download() {
           width={1280}
           height={720}
           loading="lazy"
+          fetchPriority="low"
           className="h-full w-full object-cover object-center brightness-[0.6]"
         />
         {/* Fade the backdrop into the page black at the top and bottom edges */}
@@ -25,6 +26,7 @@ export function Download() {
           width={96}
           height={96}
           loading="lazy"
+          fetchPriority="low"
           className="size-24 rounded-[1.6rem] border border-line"
         />
         <h2 className="mt-10 font-display text-5xl leading-[1.05] font-bold tracking-tighter text-balance md:text-6xl">

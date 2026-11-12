@@ -38,6 +38,7 @@ function ReviewCard({ review, index }: { review: Review; index: number }) {
             width={40}
             height={40}
             loading="lazy"
+            fetchPriority="low"
             className="size-10 rounded-full bg-surface-2 object-cover"
           />
           <div className="flex flex-col gap-1">
@@ -65,6 +66,7 @@ export function Reviews() {
           width={1280}
           height={720}
           loading="lazy"
+          fetchPriority="low"
           className="h-full w-full object-cover object-center brightness-[0.6]"
         />
         {/* Soft top edge, then fully black by the halfway point of the section */}

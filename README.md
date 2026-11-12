@@ -90,7 +90,11 @@ node scripts/optimize-images.mjs "$PWD/images" "$PWD"
 node scripts/optimize-raw.mjs
 ```
 
-Re-run the relevant script after adding or replacing a source image.
+Re-run the relevant script after adding or replacing a source image. The app screenshots also have 360px and 540px copies in `src/assets/responsive/` for `srcset`, so smaller screens don't download the 720px originals. Regenerate them after replacing a screenshot (the build fails if one is missing):
+
+```bash
+node scripts/screenshot-variants.mjs
+```
 
 ## Deployment
 
