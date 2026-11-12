@@ -1,66 +1,48 @@
-import type { ReactNode } from "react";
-import { ImdbLogo, SimklLogo, StremioLogo, TraktLogo, TvTimeLogo } from "../components/BrandLogos";
+import { Link } from "react-router-dom";
+import { BrandTile, type Brand } from "../components/BrandTile";
 import { Reveal } from "../components/Reveal";
+import { guidePath } from "../guides";
 
 type Source = {
-  name: string;
+  brand: Brand;
   title: string;
   body: string;
   note?: string;
-  logo: ReactNode;
+  /** Guide slug, once that service has one. */
+  guide?: string;
 };
 
 const sources: Source[] = [
   {
-    name: "Trakt",
+    brand: "trakt",
     title: "Trakt sync",
     body: "Connect your Trakt account and your watch history, ratings and lists come straight over. Nothing to re-enter.",
-    logo: (
-      <span className="flex size-16 items-center justify-center rounded-2xl bg-[#ed1c24] text-white">
-        <TraktLogo className="size-9" />
-      </span>
-    ),
+    guide: "trakt-sync",
   },
   {
-    name: "IMDb",
+    brand: "imdb",
     title: "IMDb import",
     body: "Already rating on IMDb? Bring your ratings and watchlist with you and pick up right where you left off.",
-    logo: (
-      <span className="flex size-16 items-center justify-center rounded-2xl bg-[#f5c518] text-black">
-        <ImdbLogo className="size-10" />
-      </span>
-    ),
+    guide: "imdb-import",
   },
   {
-    name: "Simkl",
+    brand: "simkl",
     title: "Simkl import",
     body: "Moving from Simkl? Bring your watch history, ratings and watchlist over and keep going where you left off.",
-    logo: (
-      <span className="flex size-16 items-center justify-center rounded-2xl bg-black text-white ring-1 ring-white/15 ring-inset">
-        <SimklLogo className="size-9" />
-      </span>
-    ),
+    guide: "simkl-import",
   },
   {
-    name: "TV Time",
+    brand: "tvtime",
     title: "TV Time import",
     body: "Saved your data before TV Time shut down? Bring your official data request, or an export from TV Time Out, Liberator or Data Extractor.",
-    logo: (
-      <span className="flex size-16 items-center justify-center rounded-2xl bg-[#373737]">
-        <TvTimeLogo className="size-9" />
-      </span>
-    ),
+    guide: "tv-time-import",
   },
   {
-    name: "Stremio",
+    brand: "stremio",
     title: "Stremio sync",
     body: "Link Stremio and anything you finish there, from movies and shows to anime, is marked as watched in ShowSeek.",
     note: "Requires Stremio 5",
-    logo: (
-      <span className="flex size-16 items-center justify-center rounded-2xl bg-[#685cee] text-white">
-        <StremioLogo className="size-9" />
-      </span>
-    ),
+    guide: "stremio-sync",
   },
 ];
 
@@ -81,14 +63,19 @@ export function Imports() {
         </Reveal>
         <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-6">
           {sources.map((s, i) => (
-            <Reveal key={s.name} index={i + 1} className={`flex flex-col items-start rounded-3xl border border-line bg-surface p-8 ${spans[i]}`}>
-              <span role="img" aria-label={`${s.name} logo`}>
-                {s.logo}
-              </span>
+            <Reveal key={s.brand} index={i + 1} className={`flex flex-col items-start rounded-3xl border border-line bg-surface p-8 ${spans[i]}`}>
+              <BrandTile brand={s.brand} />
               <h3 className="mt-6 font-display text-2xl font-bold tracking-tight">{s.title}</h3>
               <p className="mt-2 leading-relaxed text-muted">{s.body}</p>
-              {s.note && (
-                <p className="mt-auto self-stretch pt-6 text-right text-xs text-muted italic">{s.note}*</p>
+              {(s.guide || s.note) && (
+                <div className="mt-auto flex items-end justify-between gap-4 self-stretch pt-6">
+                  {s.guide && (
+                    <Link to={guidePath(s.guide)} className="text-sm font-semibold text-accent hover:underline">
+                      {s.title} guide →
+                    </Link>
+                  )}
+                  {s.note && <p className="ml-auto text-right text-xs text-muted italic">{s.note}*</p>}
+                </div>
               )}
             </Reveal>
           ))}

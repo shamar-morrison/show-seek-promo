@@ -5,6 +5,10 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./sections/Footer";
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
+import { GuidePage } from "./pages/GuidePage";
+import { GuidesIndex } from "./pages/GuidesIndex";
+import { guidePath, guides } from "./guides";
+import { guidesIndexPath, pageForPath } from "./routes";
 
 /** Scrolls to the URL hash after route changes (e.g. /#features from the 404 page). */
 function ScrollToHash() {
@@ -20,14 +24,29 @@ function ScrollToHash() {
   return null;
 }
 
+/** The static <head> is written per page at build time; this only keeps the tab title right after client-side navigation. */
+function DocumentTitle() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    const page = pageForPath(pathname);
+    if (page) document.title = page.title;
+  }, [pathname]);
+  return null;
+}
+
 export default function App() {
   return (
     <Tooltip.Provider delay={150}>
       <ScrollToHash />
+      <DocumentTitle />
       <Navbar />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path={guidesIndexPath} element={<GuidesIndex />} />
+          {guides.map((g) => (
+            <Route key={g.slug} path={guidePath(g.slug)} element={<GuidePage guide={g} />} />
+          ))}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

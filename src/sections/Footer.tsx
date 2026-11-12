@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { NewTwitterIcon } from "@hugeicons/core-free-icons";
 import { links, navItems } from "../content";
 import { Logo } from "../components/Logo";
 import { ExternalLink } from "../components/ExternalLink";
+import { guidePath, guides } from "../guides";
 
 const heading = "text-sm font-semibold text-fg";
 const linkClass = "text-sm text-muted transition-colors hover:text-fg";
@@ -15,7 +17,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-[2fr_1fr_1fr_1fr] lg:px-8">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 sm:grid-cols-2 sm:px-6 lg:grid-cols-[2fr_1fr_1fr_1fr_1fr] lg:px-8">
         <div className="max-w-xs">
           <Logo />
           <p className="mt-4 text-sm leading-relaxed text-muted">
@@ -31,6 +33,19 @@ export function Footer() {
                 <a href={item.href} className={linkClass}>
                   {item.label}
                 </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 className={heading}>Guides</h3>
+          <ul className="mt-4 flex flex-col gap-3">
+            {guides.map((g) => (
+              <li key={g.slug}>
+                <Link to={guidePath(g.slug)} className={linkClass}>
+                  {g.label}
+                </Link>
               </li>
             ))}
           </ul>

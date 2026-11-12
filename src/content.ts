@@ -7,10 +7,13 @@ export const links = {
   terms: "https://privacy-policies-psi.vercel.app/show-seek/terms",
 };
 
+// Root-relative so they work from every page, not just the homepage.
 export const navItems = [
-  { label: "Features", href: "#features" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Download", href: "#download" },
+  { label: "Features", href: "/#features" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "Guides", href: "/guides" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Download", href: "/#download" },
 ];
 
 const avatars = import.meta.glob<string>("./assets/avatars/*.webp", { eager: true, import: "default" });

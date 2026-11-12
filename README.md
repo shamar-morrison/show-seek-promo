@@ -5,7 +5,7 @@ Marketing site for [ShowSeek](https://play.google.com/store/apps/details?id=app.
 ## Stack
 
 - React 19 + TypeScript, bundled with Vite
-- React Router (single page plus a 404 route)
+- React Router (homepage, `/guides` pages and a 404 route)
 - Tailwind CSS v4 (via `@tailwindcss/vite`)
 - [Base UI](https://base-ui.com/) for the tabs, tooltip and mobile menu dialog
 - [Hugeicons](https://hugeicons.com/) for icons
@@ -27,7 +27,9 @@ npm run preview   # serve the production build locally
 
 ## Prerendering
 
-`npm run build` writes real markup into `dist/index.html` and `dist/404.html`, so crawlers that don't run JavaScript see the full content. The client build runs first, then an SSR build of `src/entry-server.tsx` goes to `dist-ssr/` (outside `dist/`, so it is never deployed), and `scripts/prerender.mjs` fills the HTML. `src/main.tsx` hydrates that markup.
+Every page ships as fully rendered static HTML, so crawlers that don't run JavaScript see the full content. The client build runs first, then an SSR build of `src/entry-server.tsx` goes to `dist-ssr/` (outside `dist/`, so it is never deployed), and `scripts/prerender.mjs` renders each page listed in `src/routes.ts` to its own file (`/guides/tv-time-import` → `dist/guides/tv-time-import.html`, which Workers serves without the extension), plus `dist/404.html`. `src/main.tsx` hydrates that markup.
+
+Each page's `<title>`, meta description, canonical URL, Open Graph tags and JSON-LD come from `src/routes.ts` and are written into its static `<head>` at build time. The same list generates `dist/sitemap.xml`, with each page's `updated` date as its `lastmod`. The build fails if a listed page renders as a 404 or is missing its head data.
 
 Components render at build time and again in the browser, and both results must match. Anything that varies between the two (the current date, `window`, random values) has to start from a build-time value and change in an effect, as the footer year does.
 
@@ -35,10 +37,14 @@ Components render at build time and again in the browser, and both results must 
 
 ```
 src/
-  content.ts        # all copy, links and reviews (single source of truth)
-  sections/         # Hero, Features, Reviews, Socials, Download, Footer
-  components/       # Navbar, Logo, StoreButtons, Reveal, ExternalLink
-  pages/            # Home, NotFound
+  content.ts        # homepage copy, links and reviews
+  faq.ts            # homepage FAQ (also emitted as FAQPage JSON-LD)
+  guides/           # one data file per guide, registered in guides/index.ts
+  routes.ts         # every prerendered page: path, output file, <head> and JSON-LD
+  seo.ts            # site URL and JSON-LD helpers
+  sections/         # Hero, Features, Reviews, Imports, Faq, Download, Footer
+  components/       # Navbar, Logo, StoreButtons, Reveal, BrandTile, FaqList, GuideCards, ...
+  pages/            # Home, GuidesIndex, GuidePage, NotFound
   hooks/useInView.ts
   index.css         # theme tokens and animations
   assets/           # optimized images used by the site
@@ -48,7 +54,13 @@ scripts/            # prerender step and image optimization scripts (sharp)
 public/             # favicon, OG image, robots.txt
 ```
 
-Most text changes (links, reviews) happen in `src/content.ts`.
+Most homepage text changes (links, reviews) happen in `src/content.ts`.
+
+## Guides
+
+To add a guide, create a `Guide` in `src/guides/` and add it to the list in `src/guides/index.ts`. Its route, prerendered page, `<head>`, JSON-LD, sitemap entry, footer link and `/guides` card follow from that. Set `guide` on the matching card in `src/sections/Imports.tsx` to link it from the homepage. When you change a guide's content, bump its `updated` date so the sitemap's `lastmod` tells search engines to recrawl it.
+
+Guide facts come from the app repo (`show-seek`, mainly `src/i18n/locales/en-US.json`), but the copy is written for search rather than copied from the app. Don't mention Premium on these pages.
 
 ## Images
 

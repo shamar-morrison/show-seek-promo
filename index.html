@@ -29,20 +29,8 @@
     <meta name="twitter:site" content="@theavgcoder" />
     <meta name="twitter:image" content="https://show-seek.app/og.jpg" />
     <meta name="google-play-app" content="app-id=app.horizon.showseek" />
-    <!-- No aggregateRating: ratings live on Google Play, and Google's guidelines bar aggregating them from other sites. -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "ShowSeek",
-        "url": "https://show-seek.app/",
-        "description": "Track episodes, build watchlists, rate movies and shows, and get release reminders.",
-        "operatingSystem": "ANDROID",
-        "applicationCategory": "EntertainmentApplication",
-        "installUrl": "https://play.google.com/store/apps/details?id=app.horizon.showseek",
-        "offers": { "@type": "Offer", "price": 0 }
-      }
-    </script>
+    <!-- Title, description, canonical, og:url/title/description and JSON-LD are rewritten per page by
+         scripts/prerender.mjs from src/routes.ts. The values here are the homepage's (and the dev server's). -->
     <!-- Reveal animations need JS to finish, so without it the content must start visible. -->
     <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
   </head>

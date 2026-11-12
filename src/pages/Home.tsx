@@ -2,6 +2,7 @@ import { Hero } from "../sections/Hero";
 import { Features } from "../sections/Features";
 import { Reviews } from "../sections/Reviews";
 import { Imports } from "../sections/Imports";
+import { Faq } from "../sections/Faq";
 import { Download } from "../sections/Download";
 
 export function Home() {
@@ -11,6 +12,7 @@ export function Home() {
       <Features />
       <Reviews />
       <Imports />
+      <Faq />
       <Download />
     </>
   );

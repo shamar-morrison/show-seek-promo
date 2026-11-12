@@ -15,16 +15,18 @@ export function Navbar() {
 
         <div className="hidden items-center gap-8 md:flex">
           <ul className="flex items-center gap-7 text-sm text-muted">
-            {navItems.slice(0, 2).map((item) => (
-              <li key={item.href}>
-                <a href={item.href} className="transition-colors hover:text-fg">
-                  {item.label}
-                </a>
-              </li>
-            ))}
+            {navItems
+              .filter((item) => item.label !== "Download")
+              .map((item) => (
+                <li key={item.href}>
+                  <a href={item.href} className="transition-colors hover:text-fg">
+                    {item.label}
+                  </a>
+                </li>
+              ))}
           </ul>
           <a
-            href="#download"
+            href="/#download"
             className="rounded-full bg-accent-fill px-5 py-2 text-sm font-semibold text-white transition-[transform,background-color] hover:bg-accent-fill-hover active:scale-[0.98]"
           >
             Download
