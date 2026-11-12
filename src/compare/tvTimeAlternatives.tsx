@@ -8,45 +8,64 @@ import type { Faq } from "../seo";
 
 export const COMPARE_PATH = "/compare/tv-time-alternatives";
 
-/** "yes" / "no" / "unknown" drive the icon; the text says what exactly. */
-export type Cell = { state: "yes" | "partial" | "no" | "unknown"; text: string };
+/** The mark drives the icon; the text is a one- or two-word label shown next to it. */
+export type Mark = "yes" | "partial" | "no" | "unknown" | "na";
+export type Cell = { state: Mark; text: string };
 
 export type AltApp = {
   name: string;
+  /** Full platform list for the app card. */
   platforms: string;
-  tvTimeImport: Cell;
+  android: boolean;
+  iphone: boolean;
+  /** Matrix cells: keep the text to a word or two. */
+  tvTime: Cell;
+  ratingsLists: Cell;
   trakt: Cell;
   stremio: Cell;
+  /** The detail behind the TV Time cell, shown on the app card. */
+  tvTimeDetail: string;
   bestFor: string;
   worthKnowing: string;
   url: string;
   isShowSeek?: boolean;
 };
 
-const unknown: Cell = { state: "unknown", text: "Not confirmed" };
+const unconfirmed: Cell = { state: "unknown", text: "Unconfirmed" };
+const notApplicable: Cell = { state: "na", text: "" };
+const viaTrakt: Cell = { state: "partial", text: "Via Trakt" };
+const twoWay: Cell = { state: "yes", text: "Two-way" };
+const noneFound: Cell = { state: "no", text: "None found" };
 
 export const apps: AltApp[] = [
   {
     name: "ShowSeek",
     isShowSeek: true,
     platforms: "Android",
-    tvTimeImport: {
-      state: "yes",
-      text: "All four export types: GDPR data request, TV Time Out, Liberator and Data Extractor. Ratings and lists included.",
-    },
-    trakt: { state: "partial", text: "Brings in your Trakt history, or a Trakt export ZIP" },
-    stremio: { state: "yes", text: "Built-in add-on, no Trakt account needed" },
+    android: true,
+    iphone: false,
+    tvTime: { state: "yes", text: "All 4 types" },
+    ratingsLists: { state: "yes", text: "Both" },
+    trakt: { state: "partial", text: "Import" },
+    stremio: { state: "yes", text: "Direct" },
+    tvTimeDetail:
+      "All four export types: the GDPR data request, TV Time Out, Liberator and Data Extractor. Show and movie ratings and custom lists come across.",
     bestFor:
       "Bringing over whichever TV Time export you saved, ratings and lists included, and tracking what you watch in Stremio without Trakt.",
-    worthKnowing: "Android only for now; an iOS version is on its way. Trakt sync brings your history in but doesn't write back to Trakt.",
+    worthKnowing:
+      "Android only for now; an iOS version is on its way. Trakt sync brings your Trakt history in but doesn't write back to Trakt.",
     url: "/",
   },
   {
     name: "Hobi",
     platforms: "Android, iPhone",
-    tvTimeImport: { state: "yes", text: "The official GDPR export ZIP, ratings included" },
-    trakt: { state: "yes", text: "Two-way" },
-    stremio: { state: "partial", text: "Through Trakt" },
+    android: true,
+    iphone: true,
+    tvTime: { state: "yes", text: "GDPR only" },
+    ratingsLists: { state: "partial", text: "Ratings" },
+    trakt: twoWay,
+    stremio: viaTrakt,
+    tvTimeDetail: "The official GDPR export ZIP, with your watch history, watchlist, movies and ratings.",
     bestFor: "A long-running episode tracker on both iPhone and Android, with two-way Trakt sync.",
     worthKnowing: "Its TV Time importer takes the official GDPR export, not files from third-party export tools.",
     url: "https://hobiapp.com",
@@ -54,9 +73,13 @@ export const apps: AltApp[] = [
   {
     name: "Moviebase",
     platforms: "Android, iPhone",
-    tvTimeImport: { state: "yes", text: "A TV Time ZIP or CSV export" },
-    trakt: { state: "yes", text: "Two-way" },
-    stremio: { state: "partial", text: "Through Trakt" },
+    android: true,
+    iphone: true,
+    tvTime: { state: "yes", text: "ZIP or CSV" },
+    ratingsLists: { state: "partial", text: "Ratings" },
+    trakt: twoWay,
+    stremio: viaTrakt,
+    tvTimeDetail: "A TV Time ZIP or CSV export, with watched episodes, movies, watchlist and ratings.",
     bestFor: "Movies and TV in one library on both platforms, with imports from several other trackers too.",
     worthKnowing: "Its TV Time page doesn't say which export tools it supports, so check your file type.",
     url: "https://moviebase.app",
@@ -64,12 +87,14 @@ export const apps: AltApp[] = [
   {
     name: "Movie Paradise",
     platforms: "Android, iPhone",
-    tvTimeImport: {
-      state: "yes",
-      text: "GDPR data request, Liberator and TV Time Out files, including TV Time comments",
-    },
-    trakt: { state: "yes", text: "Two-way, plus Simkl and MDBList" },
-    stremio: { state: "partial", text: "Through Trakt" },
+    android: true,
+    iphone: true,
+    tvTime: { state: "yes", text: "3 of 4 types" },
+    ratingsLists: { state: "yes", text: "Both" },
+    trakt: twoWay,
+    stremio: viaTrakt,
+    tvTimeDetail:
+      "The GDPR data request, Liberator and TV Time Out files, with ratings, lists and even your TV Time comments.",
     bestFor: "The widest range of import sources, including bringing over your TV Time comments.",
     worthKnowing: "It doesn't list Data Extractor files among its supported TV Time exports.",
     url: "https://movieparadise.app",
@@ -77,9 +102,13 @@ export const apps: AltApp[] = [
   {
     name: "Trakt",
     platforms: "Web, Android, iPhone",
-    tvTimeImport: { state: "yes", text: "On the Trakt website" },
-    trakt: { state: "yes", text: "It's Trakt" },
-    stremio: { state: "yes", text: "Built into Stremio" },
+    android: true,
+    iphone: true,
+    tvTime: { state: "yes", text: "On the website" },
+    ratingsLists: { state: "partial", text: "Lists" },
+    trakt: notApplicable,
+    stremio: { state: "yes", text: "Built in" },
+    tvTimeDetail: "TV Time exports are imported on the Trakt website, including your custom lists.",
     bestFor: "Keeping your history in a service that many other apps, including ShowSeek, can read.",
     worthKnowing: "Trakt is a tracking service as much as an app. Many people use it alongside another app.",
     url: "https://trakt.tv",
@@ -87,19 +116,27 @@ export const apps: AltApp[] = [
   {
     name: "Simkl",
     platforms: "Web, Android, iPhone",
-    tvTimeImport: unknown,
-    trakt: { state: "partial", text: "Imports from Trakt" },
-    stremio: unknown,
+    android: true,
+    iphone: true,
+    tvTime: unconfirmed,
+    ratingsLists: unconfirmed,
+    trakt: { state: "partial", text: "Import" },
+    stremio: unconfirmed,
+    tvTimeDetail: "We couldn't confirm Simkl's current TV Time import on its own site.",
     bestFor: "Tracking TV, anime and movies in one service, with a strong anime focus.",
-    worthKnowing: "We couldn't confirm its current TV Time import on its own site, so check before you rely on it.",
+    worthKnowing: "Check its TV Time import before you rely on it.",
     url: "https://simkl.com",
   },
   {
     name: "Serializd",
     platforms: "Web, Android, iPhone",
-    tvTimeImport: unknown,
-    trakt: { state: "no", text: "None found" },
-    stremio: { state: "no", text: "None found" },
+    android: true,
+    iphone: true,
+    tvTime: unconfirmed,
+    ratingsLists: unconfirmed,
+    trakt: noneFound,
+    stremio: noneFound,
+    tvTimeDetail: "We couldn't confirm a TV Time import on Serializd's own site.",
     bestFor: "Reviewing and discussing TV, often described as a Letterboxd for TV.",
     worthKnowing: "It's built around reviews and a social feed more than episode-by-episode tracking.",
     url: "https://www.serializd.com",
@@ -107,21 +144,30 @@ export const apps: AltApp[] = [
   {
     name: "Bingers",
     platforms: "Android, iPhone",
-    tvTimeImport: unknown,
-    trakt: { state: "no", text: "None found" },
-    stremio: { state: "no", text: "None found" },
+    android: true,
+    iphone: true,
+    tvTime: { state: "yes", text: "Formats not listed" },
+    ratingsLists: unconfirmed,
+    trakt: noneFound,
+    stremio: noneFound,
+    tvTimeDetail:
+      "Bingers offers a TV Time history upload on its website, but it doesn't say publicly which export types it accepts or what comes across.",
     bestFor: "Community reactions to episodes, closest to TV Time's social side. Made by TV Time's founder.",
-    worthKnowing: "A newer app, so check which of TV Time's features you rely on are there yet.",
+    worthKnowing: "You sign in on the Bingers website to upload your TV Time history, so check it accepts the export you saved.",
     url: "https://bingers.app",
   },
   {
     name: "Cinopsys",
     platforms: "Android",
-    tvTimeImport: { state: "no", text: "Not directly. Import into Trakt, Simkl or WeTrakr first, then sync" },
-    trakt: { state: "yes", text: "Plus Simkl, MDBList and WeTrakr" },
-    stremio: { state: "partial", text: "Through Trakt" },
+    android: true,
+    iphone: false,
+    tvTime: { state: "no", text: "Not directly" },
+    ratingsLists: notApplicable,
+    trakt: { state: "yes", text: "Sync" },
+    stremio: viaTrakt,
+    tvTimeDetail: "No direct import. Move your export into Trakt, Simkl or WeTrakr first, then sync Cinopsys with it.",
     bestFor: "An Android client for Trakt, Simkl, MDBList or WeTrakr, or tracking without an account.",
-    worthKnowing: "You'll need to move your TV Time export into one of those services before Cinopsys can see it.",
+    worthKnowing: "You'll need your TV Time history in one of those services before Cinopsys can see it.",
     url: "https://cinopsysapp.com",
   },
 ];
@@ -188,7 +234,7 @@ export const compareFaqs: Faq[] = [
   },
   {
     q: "Which apps can import TV Time data?",
-    a: "ShowSeek, Hobi, Moviebase, Movie Paradise and Trakt all import TV Time exports directly. ShowSeek reads all four export types; the others accept some of them, so check which file you have.",
+    a: "ShowSeek, Hobi, Moviebase, Movie Paradise, Bingers and Trakt all import TV Time exports directly. ShowSeek reads all four export types; the others accept some of them or don't say which, so check which file you have.",
   },
   {
     q: "Is there a TV Time alternative for iPhone?",
@@ -196,6 +242,6 @@ export const compareFaqs: Faq[] = [
   },
   {
     q: "Do I need Trakt to move from TV Time?",
-    a: "No. ShowSeek, Hobi, Moviebase and Movie Paradise import TV Time exports directly. Apps like Cinopsys need your history in Trakt, Simkl or WeTrakr first.",
+    a: "No. ShowSeek, Hobi, Moviebase, Movie Paradise and Bingers import TV Time exports directly. Apps like Cinopsys need your history in Trakt, Simkl or WeTrakr first.",
   },
 ];
